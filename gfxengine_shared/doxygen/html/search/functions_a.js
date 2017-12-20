@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['parseonetag',['parseOneTag',['../simplexml_8c.html#a72544929e6029dc6b2af886897425649',1,'simplexml.c']]],
+  ['parsesimplexml',['parseSimpleXml',['../simplexml_8c.html#a3a90b53abceb0c26dd9b66c220f01c78',1,'simplexml.c']]],
+  ['peekinputchar',['peekInputChar',['../simplexml_8c.html#a3ba6e8912976d8fea8ec59ae21ca5192',1,'simplexml.c']]],
+  ['peekinputcharat',['peekInputCharAt',['../simplexml_8c.html#a174cba88a953f2867dc1be7ef3a780b4',1,'simplexml.c']]],
+  ['playmusic',['playMusic',['../bfg__sfx_engine_8c.html#a54f57f3f5d4d48d2bd660460ddedba81',1,'playMusic(char *filename):&#160;bfg_sfxEngine.c'],['../bfg__sfx_engine_8h.html#a54f57f3f5d4d48d2bd660460ddedba81',1,'playMusic(char *filename):&#160;bfg_sfxEngine.c']]],
+  ['playsound',['playSound',['../bfg__sfx_engine_8c.html#a3851c8ba8ebd77af726654489a920e82',1,'playSound(int soundNumber, int numberLoop):&#160;bfg_sfxEngine.c'],['../bfg__sfx_engine_8h.html#a3851c8ba8ebd77af726654489a920e82',1,'playSound(int soundNumber, int numberLoop):&#160;bfg_sfxEngine.c']]],
+  ['prepareecriturevideoglobale',['prepareEcritureVideoGlobale',['../bfg___gfx_engine___dreamcast_8c.html#ad696262b2db6deb977bed17575cd0ab5',1,'prepareEcritureVideoGlobale():&#160;bfg_GfxEngine_Dreamcast.c'],['../bfg___gfx_engine___dreamcast_8h.html#ad696262b2db6deb977bed17575cd0ab5',1,'prepareEcritureVideoGlobale():&#160;bfg_GfxEngine_Dreamcast.c'],['../bfg___gfx_engine___p_c_8c.html#ad696262b2db6deb977bed17575cd0ab5',1,'prepareEcritureVideoGlobale():&#160;bfg_GfxEngine_PC.c'],['../bfg___gfx_engine___p_c_8h.html#ad696262b2db6deb977bed17575cd0ab5',1,'prepareEcritureVideoGlobale():&#160;bfg_GfxEngine_Dreamcast.c']]],
+  ['prepareecriturevideotra',['prepareEcritureVideoTra',['../bfg___gfx_engine___dreamcast_8c.html#a9bbc3cef7e605d41669b289602aa14d1',1,'prepareEcritureVideoTra():&#160;bfg_GfxEngine_Dreamcast.c'],['../bfg___gfx_engine___dreamcast_8h.html#a9bbc3cef7e605d41669b289602aa14d1',1,'prepareEcritureVideoTra():&#160;bfg_GfxEngine_Dreamcast.c'],['../bfg___gfx_engine___p_c_8c.html#a9bbc3cef7e605d41669b289602aa14d1',1,'prepareEcritureVideoTra():&#160;bfg_GfxEngine_PC.c'],['../bfg___gfx_engine___p_c_8h.html#a9bbc3cef7e605d41669b289602aa14d1',1,'prepareEcritureVideoTra():&#160;bfg_GfxEngine_Dreamcast.c']]]
+];

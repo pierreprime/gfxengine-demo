@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['sbuffer',['sBuffer',['../structsimplexml__value__buffer.html#ad56eca2bd9660a62dc857f6accdf3824',1,'simplexml_value_buffer']]],
+  ['scaleratioh',['scaleRatioH',['../bfg___gfx_engine___p_c_8c.html#a885baaff1ef8e939af274a586defb8c5',1,'bfg_GfxEngine_PC.c']]],
+  ['scaleratiow',['scaleRatioW',['../bfg___gfx_engine___p_c_8c.html#a6e4909f8332430c6101a49501f7bf367',1,'bfg_GfxEngine_PC.c']]],
+  ['scrollmap',['scrollMap',['../bfg__scroll_map_8c.html#a18de1b22e90e5f7ba60858a622b4dc61',1,'bfg_scrollMap.c']]],
+  ['sh',['sh',['../structsibank.html#a10664c4ae862dbb6116dc28da6718f5a',1,'sibank::sh()'],['../structstiles.html#a10664c4ae862dbb6116dc28da6718f5a',1,'stiles::sh()'],['../structsalpha.html#a10664c4ae862dbb6116dc28da6718f5a',1,'salpha::sh()'],['../structib.html#a10664c4ae862dbb6116dc28da6718f5a',1,'ib::sh()'],['../structit.html#a10664c4ae862dbb6116dc28da6718f5a',1,'it::sh()'],['../structal.html#a10664c4ae862dbb6116dc28da6718f5a',1,'al::sh()']]],
+  ['show_5fresx',['show_resX',['../bfg___gfx_engine___p_c_8c.html#aa6cb3fefe53a3b10e25958fcbd09dd9f',1,'bfg_GfxEngine_PC.c']]],
+  ['show_5fresy',['show_resY',['../bfg___gfx_engine___p_c_8c.html#a216f9b22baa17c2cfdb85607be99dc23',1,'bfg_GfxEngine_PC.c']]],
+  ['sinputdata',['sInputData',['../structsimplexml__parser__state.html#a3a86b5892149a559e482511e8e51fa91',1,'simplexml_parser_state']]],
+  ['sl',['sl',['../structsibank.html#ace9c0991f7fffe6ab436175d7fff821e',1,'sibank::sl()'],['../structstiles.html#ace9c0991f7fffe6ab436175d7fff821e',1,'stiles::sl()'],['../structsalpha.html#ace9c0991f7fffe6ab436175d7fff821e',1,'salpha::sl()'],['../structib.html#ace9c0991f7fffe6ab436175d7fff821e',1,'ib::sl()'],['../structit.html#ace9c0991f7fffe6ab436175d7fff821e',1,'it::sl()'],['../structal.html#ace9c0991f7fffe6ab436175d7fff821e',1,'al::sl()']]],
+  ['sound',['sound',['../bfg__sfx_engine_8c.html#a86289c1f799f7241d7fd4d6ca7df7470',1,'bfg_sfxEngine.c']]],
+  ['sprite',['sprite',['../bfg__sprite_engine_8c.html#a7942cf1d7ad84203800fc8923b096945',1,'bfg_spriteEngine.c']]],
+  ['step_5frot',['step_rot',['../structspart.html#ac67b47b18a670a3bf43130a4568effb8',1,'spart']]],
+  ['step_5fx',['step_x',['../structspart.html#a321d8a64a02123e4217aed543a57b4be',1,'spart']]],
+  ['step_5fy',['step_y',['../structspart.html#a94ea15f8f0791f2f2d5a31c352fa07d3',1,'spart']]],
+  ['stepr',['stepR',['../structssprite.html#a8da0eff9c38a5d72dc2cba72d80c6d33',1,'ssprite']]],
+  ['steptx',['stepTX',['../structssprite.html#a09ad17b8734d670291a102d230bb868c',1,'ssprite']]],
+  ['stepty',['stepTY',['../structssprite.html#a79f109e60b5d76a5f91bf68ae8beecdb',1,'ssprite']]],
+  ['surface',['surface',['../structsimage.html#a2831765ebe3133089c407c258bdcae98',1,'simage::surface()'],['../structsi.html#a360e9b93682f169bda617eb2654bdd0d',1,'si::surface()']]],
+  ['sx',['sx',['../structsibank.html#a699a96985661e4518b86127b4e63c3a8',1,'sibank::sx()'],['../structstiles.html#a699a96985661e4518b86127b4e63c3a8',1,'stiles::sx()'],['../structsalpha.html#a699a96985661e4518b86127b4e63c3a8',1,'salpha::sx()'],['../structib.html#a699a96985661e4518b86127b4e63c3a8',1,'ib::sx()'],['../structit.html#a699a96985661e4518b86127b4e63c3a8',1,'it::sx()'],['../structal.html#a699a96985661e4518b86127b4e63c3a8',1,'al::sx()']]],
+  ['sy',['sy',['../structsibank.html#affcd3fe43d73220dd7b3e6bde969e65c',1,'sibank::sy()'],['../structstiles.html#affcd3fe43d73220dd7b3e6bde969e65c',1,'stiles::sy()'],['../structsalpha.html#affcd3fe43d73220dd7b3e6bde969e65c',1,'salpha::sy()'],['../structib.html#affcd3fe43d73220dd7b3e6bde969e65c',1,'ib::sy()'],['../structit.html#affcd3fe43d73220dd7b3e6bde969e65c',1,'it::sy()'],['../structal.html#affcd3fe43d73220dd7b3e6bde969e65c',1,'al::sy()']]],
+  ['szattribute',['szAttribute',['../structsimplexml__parser__state.html#a9d2ee765a267ae82516782b38b294d5b',1,'simplexml_parser_state']]]
+];

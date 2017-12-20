@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['nativesize',['nativeSize',['../bfg___gfx_engine___p_c_8c.html#a39e7f8d69ed43acfa2d8671cf36e8428',1,'bfg_GfxEngine_PC.c']]],
+  ['nattributebuffersize',['nAttributeBufferSize',['../structsimplexml__parser__state.html#a994f56c8b8de5e2e3dc4c18f63a3da93',1,'simplexml_parser_state']]],
+  ['nbframer',['nbFrameR',['../structssprite.html#a9a7611fda53a02223af23b91b4cc9cef',1,'ssprite']]],
+  ['nbframetx',['nbFrameTX',['../structssprite.html#af7ffb74eda0cee79493aacab7fe7cf98',1,'ssprite']]],
+  ['nbframety',['nbFrameTY',['../structssprite.html#a21eff3816039347d223f1f90290462f0',1,'ssprite']]],
+  ['nbhitbox',['nbHitBox',['../structsmsprite.html#a5bcb26d2526477f076f5faf3d4848c2e',1,'smsprite']]],
+  ['nbpart',['nbpart',['../structsmsprite.html#a1c371b9d3e7fdb6ccc36b44e6ac3e9d1',1,'smsprite']]],
+  ['nerror',['nError',['../structsimplexml__parser__state.html#a70a9294f14e4f40596325cea52aa10bc',1,'simplexml_parser_state']]],
+  ['newwindowsize',['newWindowSize',['../bfg___gfx_engine___p_c_8c.html#a9f102e65d7dbb8d705c41935a60cd7f6',1,'bfg_GfxEngine_PC.c']]],
+  ['next',['next',['../structsimplexml__user__data.html#a114707a2058a19d5a7b4b7cb60406b41',1,'simplexml_user_data::next()'],['../bfg__rnd_engine_8c.html#ae3d9c203031a75cf83ae5b2aa5cde689',1,'next():&#160;bfg_rndEngine.c']]],
+  ['ninputdatapos',['nInputDataPos',['../structsimplexml__parser__state.html#acf0a4376b8dfe4305e81838a4ba49662',1,'simplexml_parser_state']]],
+  ['ninputdatasize',['nInputDataSize',['../structsimplexml__parser__state.html#ab3771332860cb603daaaf696d5895ceb',1,'simplexml_parser_state']]],
+  ['ninputlinenumber',['nInputLineNumber',['../structsimplexml__parser__state.html#a4e4c8105a714cb214b0860d0d5823073',1,'simplexml_parser_state']]],
+  ['nnexttoken',['nNextToken',['../structsimplexml__parser__state.html#a51ebc5311e64973ed0a583ce92e13537',1,'simplexml_parser_state']]],
+  ['no_5fdocument_5ftag',['NO_DOCUMENT_TAG',['../simplexml_8c.html#af2dcd911de8620a63b38690b546d0fd2',1,'simplexml.c']]],
+  ['no_5ferror',['NO_ERROR',['../simplexml_8c.html#a258bb72419ef143530a2f8f55e7d57af',1,'simplexml.c']]],
+  ['no_5funicode_5fsupport',['NO_UNICODE_SUPPORT',['../simplexml_8c.html#a84acd6cca56771362d1b01c09e68ec51',1,'simplexml.c']]],
+  ['not_5finitialized',['NOT_INITIALIZED',['../simplexml_8c.html#ae0b1c32714c3fceec98b9e6577dd313a',1,'simplexml.c']]],
+  ['not_5fparsed',['NOT_PARSED',['../simplexml_8c.html#a4a3c27cfd2e98c67a2126311ca87649f',1,'simplexml.c']]],
+  ['nposition',['nPosition',['../structsimplexml__value__buffer.html#a61fb870a1594d6d4e556b58757bb8afe',1,'simplexml_value_buffer']]],
+  ['nsize',['nSize',['../structsimplexml__value__buffer.html#a7f10d4e3075a26e92dae6cc2a6a17397',1,'simplexml_value_buffer']]],
+  ['nx',['nx',['../bfg___gfx_engine___dreamcast_8c.html#a8b32ef850632370914be74569b830311',1,'nx(float mx, float my, float c, float s, float i, float j):&#160;bfg_GfxEngine_Dreamcast.c'],['../bfg___gfx_engine___p_c_8c.html#ae5a995acec1ee5590a48d37efea13a8f',1,'nx(int mx, int my, float c, float s, int i, int j):&#160;bfg_GfxEngine_PC.c']]],
+  ['ny',['ny',['../bfg___gfx_engine___dreamcast_8c.html#a96bd47d49e4fdefb8e176f7d8b1505ba',1,'ny(float mx, float my, float c, float s, float i, float j):&#160;bfg_GfxEngine_Dreamcast.c'],['../bfg___gfx_engine___p_c_8c.html#aca7d2cebdef77ba66ee15457739ad4af',1,'ny(int mx, int my, float c, float s, int i, int j):&#160;bfg_GfxEngine_PC.c']]]
+];
