@@ -40,6 +40,38 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../gfxengine_shared/bfg_fileEngine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_fileEngine.h" />
+		<Unit filename="../gfxengine_shared/bfg_gfxEngine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_gfxEngine.h" />
+		<Unit filename="../gfxengine_shared/bfg_rndEngine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_rndEngine.h" />
+		<Unit filename="../gfxengine_shared/bfg_scrollMap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_scrollMap.h" />
+		<Unit filename="../gfxengine_shared/bfg_sfxEngine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_sfxEngine.h" />
+		<Unit filename="../gfxengine_shared/bfg_spriteEngine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_spriteEngine.h" />
+		<Unit filename="../gfxengine_shared/bfg_tilemaps.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_tilesmaps.h" />
+		<Unit filename="../gfxengine_shared/bfg_writeEngine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../gfxengine_shared/bfg_writeEngine.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
