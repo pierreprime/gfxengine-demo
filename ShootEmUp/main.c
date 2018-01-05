@@ -1,26 +1,13 @@
 #include <stdio.h>
 #include "../gfxengine_shared/bfg_gfxEngine.h"
 #include "../gfxengine_shared/bfg_spriteEngine.h"
-
-#define IMAGE_DECOR 0
-#define IMAGE_SPRITE 1
-
-#define IB_ALIEN_F0 0
-#define IB_ALIEN_F1 1
-#define IB_PLAYER_F0 2
-#define IB_SHOOT_ALIEN_F0 3
-#define IB_SHOOT_PLAYER_F0 4
-#define IB_EXPLODE_F0 5
-#define IB_EXPLODE_F1 6
-#define IB_EXPLODE_F2 7
-#define IB_EXPLODE_F3 8
-#define IB_EXPLODE_F4 9
-#define IB_EXPLODE_F5 10
-
+#include "myDefines.h"
+#include "player.h"
+#include "playerShoot.h"
 
 int main(int argc, char *argv[])
 {
-    int player_sprite;
+    int alien_sprite;
 
     initGfxEngine();
     spr_initSpriteEngine();
@@ -40,12 +27,16 @@ int main(int argc, char *argv[])
 	getImageBankTra(IB_EXPLODE_F4, IMAGE_SPRITE,274,187,64,64);
 	getImageBankTra(IB_EXPLODE_F5, IMAGE_SPRITE,342,187,64,64);
 
-	// reserve sprite in memory
-	player_sprite = spr_reserveFreeSprite();
-	spr_initSprite(player_sprite, 100, 100, 0, IB_PLAYER_F0);
+	// reserve sprite for alien
+	alien_sprite = spr_reserveFreeSprite();
+    spr_initSprite(alien_sprite, 200, 200, 0, IB_ALIEN_F0);
+
+    playerInit();
+    ps_init();
 
     while(1){
-        checkController();
+        playerControl();
+        ps_moveAll();
 
         prepareEcritureVideoGlobale();
         prepareEcritureVideoTra();
@@ -53,16 +44,7 @@ int main(int argc, char *argv[])
         blitImageTra(IMAGE_DECOR, 0, 0);
         blitImageTra(IMAGE_DECOR, 512, 0);
 
-        if(getKeyLeft() == 1)
-            x--;
-        if(getKeyRight() == 1)
-            x++;
-        if(getKeyUp() == 1)
-            y--;
-        if(getKeyDown() == 1)
-            y++;
-
-
+        spr_showAllSprites();
 
         termineEcritureVideoTra();
         termineEcritureVideoGlobale();

@@ -1,7 +1,11 @@
 # depslib dependency file v1.0
-1513890993 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
+1515116559 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
+	"myDefines.h"
+	"player.h"
+	"playerShoot.h"
 
 1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -401,4 +405,22 @@
 1431334346 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
+
+1515114070 c:\users\prime\documents\devperso\jeu_developpe\shootemup\mydefines.h
+
+1515111175 c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.h
+
+1515115163 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.c
+	"../gfxengine_shared/bfg_gfxEngine.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
+	"player.h"
+	"playerShoot.h"
+	"myDefines.h"
+
+1515116368 c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.h
+
+1515116246 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.c
+	"playerShoot.h"
+	"myDefines.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
 
