@@ -28,10 +28,11 @@ void playerControl(){
         spr_moveSpriteRelative(player.sprno, -3, 0);
 
     if((getKeyA() == 1) && (player.coolDown == 0)){
-        verif = ps_create((int)spr_getSpriteX(player.sprno)+42, (int)spr_getSpriteY(player.sprno));
+        verif = ps_create((int)spr_getSpriteX(player.sprno)+83, (int)spr_getSpriteY(player.sprno));
         if(verif != -1){
             player.coolDown = PL_COOLDOWN;
         }
+        ps_create((int)spr_getSpriteX(player.sprno), (int)spr_getSpriteY(player.sprno));
     }
 }
 
