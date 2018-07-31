@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1515116559 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
+1515120159 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
@@ -7,7 +7,7 @@
 	"player.h"
 	"playerShoot.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -38,12 +38,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_main.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_stdinc.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -71,33 +71,33 @@
 	<stdlib.h>
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_config.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 
-1397500598 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_platform.h
+1397504198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_platform.h
 	"AvailabilityMacros.h"
 	"TargetConditionals.h"
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\begin_code.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\begin_code.h
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\close_code.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\close_code.h
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_assert.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_assert.h
 	"SDL_config.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_atomic.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_audio.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -107,24 +107,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_error.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_endian.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<endian.h>
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_mutex.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_thread.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -133,18 +133,18 @@
 	<process.h>
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_rwops.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_clipboard.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_cpuinfo.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -156,7 +156,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_events.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -170,7 +170,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_video.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -178,12 +178,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_pixels.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_rect.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -191,7 +191,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_surface.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -200,11 +200,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_blendmode.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_keyboard.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -212,27 +212,27 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_keycode.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_scancode.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_mouse.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_joystick.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_gamecontroller.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -240,11 +240,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_quit.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_gesture.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -252,60 +252,60 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_touch.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_filesystem.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_haptic.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_hints.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_loadso.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_log.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937196 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_messagebox.h
+1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_power.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_render.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_system.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -313,77 +313,77 @@
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_timer.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1394937198 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_version.h
+1394940798 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1431334410 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_fileengine.c
+1431338010 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_fileengine.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"../gfxengine_shared/bfg_fileEngine.h"
 
-1430895412 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_fileengine.h
+1430899012 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_fileengine.h
 
-1431333072 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_gfxengine.c
+1431336672 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_gfxengine.c
 	"./Gfxengine/bfg_GfxEngine_PC.c"
 	"./Gfxengine/bfg_GfxEngine_Dreamcast.c"
 
-1430143530 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.c
+1430147130 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.c
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 	<stdio.h>
 	"bfg_GfxEngine_PC.h"
 
-1376156342 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_image.h
+1376159942 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl_image.h
 	"SDL.h"
 	"SDL_version.h"
 	"begin_code.h"
 	"close_code.h"
 
-1430210618 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.h
+1430214218 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.h
 	<SDL2/SDL.h>
 	<stdlib.h>
 
-1431331360 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.c
+1431334960 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.c
 	<stdlib.h>
 	<kos.h>
 	<png/png.h>
 	"bfg_GfxEngine_Dreamcast.h"
 
-1431332992 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.h
+1431336592 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.h
 	<stdlib.h>
 	<kos.h>
 
-1431334400 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_rndengine.c
+1431338000 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_rndengine.c
 	"../gfxengine_shared/bfg_rndEngine.h"
 	<stdio.h>
 	<stdlib.h>
 
-1430208672 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_rndengine.h
+1430212272 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_rndengine.h
 
-1431334392 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.c
+1431337992 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.c
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_scrollMap.h"
 
-1431332418 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_gfxengine.h
+1431336018 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_gfxengine.h
 	"./Gfxengine/bfg_GfxEngine_PC.h"
 	"./Gfxengine/bfg_GfxEngine_Dreamcast.h"
 
-1430210368 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.h
+1430213968 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.h
 
-1430212866 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_sfxengine.c
+1430216466 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_sfxengine.c
 	<kos.h>
 	<oggvorbis/sndoggvorbis.h>
 
-1431334376 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.c
+1431337976 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.c
 	"../gfxengine_shared/bfg_spriteEngine.h"
 	"../gfxengine_shared/bfg_GfxEngine.h"
 	<png/png.h>
@@ -391,35 +391,35 @@
 	<stdlib.h>
 	<stdio.h>
 
-1430212796 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.h
+1430216396 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.h
 	<stdlib.h>
 	<kos.h>
 	<stdlib.h>
 
-1431502328 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilemaps.c
+1431505928 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilemaps.c
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_tilesmaps.h"
 
-1431503062 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilesmaps.h
+1431506662 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilesmaps.h
 
-1431334346 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.c
+1431337946 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
 
-1515114070 c:\users\prime\documents\devperso\jeu_developpe\shootemup\mydefines.h
+1515117670 c:\users\prime\documents\devperso\jeu_developpe\shootemup\mydefines.h
 
-1515111175 c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.h
+1515114775 c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.h
 
-1515115163 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.c
+1515118763 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.c
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
 	"player.h"
 	"playerShoot.h"
 	"myDefines.h"
 
-1515116368 c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.h
+1515119968 c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.h
 
-1515116246 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.c
+1515120195 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.c
 	"playerShoot.h"
 	"myDefines.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"

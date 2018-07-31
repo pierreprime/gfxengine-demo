@@ -15,6 +15,12 @@ void playerInit(){
 }
 
 void playerControl(){
+
+    int verif;
+    if(player.coolDown > 0){
+        player.coolDown--;
+    }
+
     checkController();
     if(getKeyRight() == 1)
         spr_moveSpriteRelative(player.sprno, 3, 0);
@@ -22,7 +28,10 @@ void playerControl(){
         spr_moveSpriteRelative(player.sprno, -3, 0);
 
     if((getKeyA() == 1) && (player.coolDown == 0)){
-        ps_create((int)spr_getSpriteX(player.sprno)+42, (int)spr_getSpriteY(player.sprno));
+        verif = ps_create((int)spr_getSpriteX(player.sprno)+42, (int)spr_getSpriteY(player.sprno));
+        if(verif != -1){
+            player.coolDown = PL_COOLDOWN;
+        }
     }
 }
 
