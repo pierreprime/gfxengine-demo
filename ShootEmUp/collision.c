@@ -3,6 +3,7 @@
 #include "playerShoot.h"
 #include "animatedObject.h"
 #include "../gfxengine_shared/bfg_spriteEngine.h"
+#include "../gfxengine_shared/bfg_sfxEngine.h"
 
 void col_checkCollisionShootAlien(void)
 {

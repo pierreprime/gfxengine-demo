@@ -64,6 +64,15 @@ void ao_destroy(int aoNumber)
     animated[aoNumber].sprno = -1;
 }
 
+void ao_destroyAll()
+{
+    int i;
+
+    for(i=0; i<MAX_ANIMATED; i++){
+        ao_destroy(i);
+    }
+}
+
 void ao_updateAll()
 {
     int i;

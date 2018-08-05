@@ -1,4 +1,5 @@
 #include "myDefines.h"
+#include "../gfxengine_shared/bfg_gfxEngine.h"
 #include "../gfxengine_shared/bfg_spriteEngine.h"
 #include "enemy.h"
 #include "enemyShoot.h"
@@ -114,4 +115,17 @@ void en_destroy(int ano)
 {
     spr_releaseSprite(enemy[ano].sprno);
     enemy[ano].type = INACTIVE_ENEMY;
+}
+
+int en_count()
+{
+    int i, cpt;
+    cpt = 0;
+    for(i=0; i<MAX_ENEMY; i++)
+    {
+        if(enemy[i].type != INACTIVE_ENEMY)
+            cpt++;
+    }
+
+    return cpt;
 }

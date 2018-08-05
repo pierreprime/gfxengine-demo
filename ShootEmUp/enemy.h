@@ -23,5 +23,6 @@ int en_getSprno(int ano);
 int en_getPv(int ano);
 void en_setPv(int ano, int pv);
 void en_destroy(int ano);
+int en_count();
 
 #endif // ENEMY_H

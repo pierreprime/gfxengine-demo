@@ -15,6 +15,7 @@ typedef struct
 void ao_init(void);
 void ao_create(int type, int x, int y);
 void ao_destroy(int aono);
+void ao_destroyAll();
 void ao_updateAll();
 
 #endif // ANIMATEDOBJECT_H

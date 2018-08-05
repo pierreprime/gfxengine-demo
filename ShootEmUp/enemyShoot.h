@@ -18,5 +18,6 @@ void es_moveAll();
 int es_getType(int esNumber);
 void es_destroy(int esNumber);
 int es_getSpriteNumber(int esNumber);
+void es_destroyAll(void);
 
 #endif // ENEMY_SHOOT_H
