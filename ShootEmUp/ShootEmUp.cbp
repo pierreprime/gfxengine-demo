@@ -72,9 +72,30 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../gfxengine_shared/bfg_writeEngine.h" />
+		<Unit filename="animatedObject.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="animatedObject.h" />
+		<Unit filename="collision.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="collision.h" />
+		<Unit filename="enemy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="enemy.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="myDefines.h" />
+		<Unit filename="player.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="player.h" />
+		<Unit filename="playerShoot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="playerShoot.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

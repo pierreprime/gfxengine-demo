@@ -23,6 +23,7 @@ int ps_create(int x, int y){
                 ps[i].type = PS_ACTIF;
                 spr_changeSpriteImage(ps[i].sprno, IB_SHOOT_PLAYER_F0);
                 spr_moveSprite(ps[i].sprno, x, y);
+                spr_setSpriteHitbox(ps[i].sprno, 0, 0, 54, 9);
                 return i;
             }
         }
@@ -59,4 +60,12 @@ void ps_destroyAll(void){
     for(i=0; i<PS_MAX; i++){
         ps_destroy(i);
     }
+}
+
+int ps_getType(int psno){
+    return ps[psno].type;
+}
+
+int ps_getSprno(int psno){
+    return ps[psno].sprno;
 }

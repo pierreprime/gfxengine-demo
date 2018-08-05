@@ -4,11 +4,12 @@
 #include "myDefines.h"
 #include "player.h"
 #include "playerShoot.h"
+#include "enemy.h"
+#include "collision.h"
+#include "animatedObject.h"
 
 int main(int argc, char *argv[])
 {
-    int alien_sprite;
-
     initGfxEngine();
     spr_initSpriteEngine();
 
@@ -27,16 +28,20 @@ int main(int argc, char *argv[])
 	getImageBankTra(IB_EXPLODE_F4, IMAGE_SPRITE,274,187,64,64);
 	getImageBankTra(IB_EXPLODE_F5, IMAGE_SPRITE,342,187,64,64);
 
-	// reserve sprite for alien
-	alien_sprite = spr_reserveFreeSprite();
-    spr_initSprite(alien_sprite, 200, 200, 0, IB_ALIEN_F0);
-
     playerInit();
     ps_init();
+    en_init();
+    ao_init();
+    en_create(YELLOW_ENEMY, 300, 100, 2, 3);
+    en_create(YELLOW_ENEMY, 300, 50, 2, 4);
+    en_create(YELLOW_ENEMY, 300, 150, 2, 5);
 
     while(1){
         playerControl();
         ps_moveAll();
+        en_moveAll();
+        ao_updateAll();
+        col_checkCollisionShootAlien();
 
         prepareEcritureVideoGlobale();
         prepareEcritureVideoTra();
@@ -44,6 +49,7 @@ int main(int argc, char *argv[])
         blitImageTra(IMAGE_DECOR, 0, 0);
         blitImageTra(IMAGE_DECOR, 512, 0);
 
+        spr_updateAllSprites();
         spr_showAllSprites();
 
         termineEcritureVideoTra();

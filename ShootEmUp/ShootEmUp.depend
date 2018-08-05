@@ -1,11 +1,14 @@
 # depslib dependency file v1.0
-1515120159 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
+1533474647 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
 	"myDefines.h"
 	"player.h"
 	"playerShoot.h"
+	"enemy.h"
+	"collision.h"
+	"animatedObject.h"
 
 1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -417,10 +420,34 @@
 	"playerShoot.h"
 	"myDefines.h"
 
-1515119968 c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.h
+1533427002 c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.h
 
-1515120195 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.c
+1533428454 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\playershoot.c
 	"playerShoot.h"
 	"myDefines.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
+
+1533475151 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.c
+	"myDefines.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
+	"enemy.h"
+
+1533473949 c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.h
+
+1533475752 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.c
+	"collision.h"
+	"enemy.h"
+	"playerShoot.h"
+	"animatedObject.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
+
+1533427621 c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.h
+
+1533472796 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\animatedobject.c
+	"../gfxengine_shared/bfg_gfxEngine.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
+	"myDefines.h"
+	"animatedObject.h"
+
+1533429456 c:\users\prime\documents\devperso\jeu_developpe\shootemup\animatedobject.h
 

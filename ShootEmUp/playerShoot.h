@@ -16,5 +16,7 @@ int ps_create(int x, int y);
 void ps_destroy(int psno);
 void ps_destroyAll(void);
 void ps_moveAll();
+int ps_getType(int psno);
+int ps_getSprno(int psno);
 
 #endif // PLAYERSHOOT_H

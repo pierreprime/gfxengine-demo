@@ -14,4 +14,13 @@ typedef struct
     int direction;
 } s_enemy;
 
+void en_init();
+int en_create(int type, int x, int y, int pv, int direction);
+void en_moveAll(void);
+int en_getType(int ano);
+int en_getSprno(int ano);
+int en_getPv(int ano);
+void en_setPv(int ano, int pv);
+void en_destroy(int ano);
+
 #endif // ENEMY_H
