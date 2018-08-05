@@ -102,3 +102,71 @@ int sm_convertYWorldInYScreen(int s,int ySourceValue)
 {
     return ySourceValue - scrollMap[s].currentWorldMapY;
 }
+
+int sm_getTileDefv1FromScrollMap(int s,int x,int y)
+{
+    int maxL = scrollMap[s].mapLargeur;
+    int maxH = scrollMap[s].mapHauteur;
+
+    if ((x>=maxL) || (y>=maxH)) return -1;
+
+    return tm_getTileDefv1(scrollMap[s].tmap[x+(y*maxL)]);
+}
+
+int sm_getTileDefv1FromScrollWorld(int s,int x,int y)
+{
+    int newx,newy;
+    int maxL = scrollMap[s].mapLargeur;
+    int maxH = scrollMap[s].mapHauteur;
+
+    newx = x/scrollMap[s].tileLH;
+    newy = y/scrollMap[s].tileLH;
+
+    if ((newx>=maxL) || (newy>=maxH)) return -1;
+
+    return tm_getTileDefv1(scrollMap[s].tmap[newx+(newy*maxL)]);
+}
+
+int sm_checkHorizontalTileDefv1FromScrollWorld(int s,int x,int y,int largeur,int v1_search)
+{
+	int x_parcours;
+	int x_max;
+	int valeur;
+
+    x_parcours = x;
+	x_max = x + largeur;
+
+    while (x_parcours<x_max)
+	{
+	    valeur = sm_getTileDefv1FromScrollWorld(s,x_parcours,y);
+	    if (valeur==v1_search) return 1;
+	    x_parcours += scrollMap[s].tileLH;
+	}
+
+    valeur = sm_getTileDefv1FromScrollWorld(s,x_max,y);
+    if (valeur==v1_search) return 1;
+
+	return 0;
+}
+
+int sm_checkVerticalTileDefv1FromScrollWorld(int s,int x,int y,int hauteur,int v1_search)
+{
+	int y_parcours;
+	int y_max;
+	int valeur;
+
+    y_parcours = y;
+	y_max = y + hauteur;
+
+    while (y_parcours<y_max)
+	{
+	    valeur = sm_getTileDefv1FromScrollWorld(s,x,y_parcours);
+	    if (valeur==v1_search) return 1;
+	    y_parcours += scrollMap[s].tileLH;
+	}
+
+    valeur = sm_getTileDefv1FromScrollWorld(s,x,y_parcours);
+    if (valeur==v1_search) return 1;
+
+	return 0;
+}

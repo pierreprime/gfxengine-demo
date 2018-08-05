@@ -269,7 +269,7 @@ int* fe_readIntArrayFromDataFile(char *fileName,char *search_balise,int endValue
         token = strtok(NULL,",");
     }
     free(data_file);
-    free(token);
+    //free(token);
     data_file=NULL;
     token=NULL;
 
@@ -434,7 +434,7 @@ int* fe_readTiledMapFromTxtFile(char *fileName,char *search_balise,int endValue)
         token = strtok(NULL,",");
     }
     free(data_file);
-    free(token);
+    //free(token);
     data_file=NULL;
     token=NULL;
 
@@ -609,7 +609,7 @@ int fe_readTiledMapFromTxtFileNoMalloc(char *fileName,char *search_balise,int *t
         token = strtok(NULL,",");
     }
     free(data_file);
-    free(token);
+    //free(token);
     data_file=NULL;
     token=NULL;
 

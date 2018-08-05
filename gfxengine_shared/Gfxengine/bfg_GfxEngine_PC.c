@@ -68,6 +68,107 @@ void destroyGfxEngine()
     SDL_DestroyWindow(gWindow);
 }
 
+
+void gfxe_init(int resolution,int hz)
+{
+    int i;
+
+    for (i=0;i<MAX_IMAGE_TRA;i++) imagesTra[i].chargee=0;
+    for (i=0;i<MAX_IMAGEBANK_TRA;i++) imageBankTra[i].chargee=0;
+	for (i=0;i<MAX_IMGTILE;i++) imageTile[i].chargee=0;
+	for (i=0;i<MAX_ALPHA;i++) imageAlpha[i].chargee=0;
+
+    if (resolution==RES_640x480)
+    {
+        resX = 640;
+        resY = 480;
+        show_resX = 640;
+        show_resY = 480;
+
+    }
+    else
+    {
+        resX = 320;
+        resY = 240;
+        show_resX = 320;
+        show_resY = 240;
+    }
+
+    nativeSize.x = 0;
+    nativeSize.y = 0;
+    nativeSize.w = resX;
+    nativeSize.h = resY;
+
+    newWindowSize.x = 0;
+    newWindowSize.y = 0;
+    newWindowSize.w = show_resX;
+    newWindowSize.h = show_resY;
+
+    resize = 0;
+
+    //Initialize SDL
+    if( SDL_Init( SDL_INIT_VIDEO ) < 0 )
+    {
+        printf( "SDL could not initialize! SDL_Error: %s\n", SDL_GetError() );
+    }
+    else
+    {
+
+        if(SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "0") < 0)
+        {
+            printf("\nFailed to set Render Scale Quality");
+        }
+
+        if (fullscreen==1) gWindow = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, show_resX, show_resY, SDL_WINDOW_SHOWN | SDL_WINDOW_FULLSCREEN);
+        else gWindow = SDL_CreateWindow( "SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, show_resX, show_resY, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE /*| SDL_WINDOW_FULLSCREEN*/);
+
+        if( gWindow == NULL )
+        {
+            printf( "Window could not be created! SDL_Error: %s\n", SDL_GetError() );
+        }
+        else
+        {
+
+            //Create renderer for window
+            gRenderer = SDL_CreateRenderer( gWindow, -1, SDL_RENDERER_ACCELERATED |  SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_TARGETTEXTURE  );
+            if( gRenderer == NULL )
+            {
+                printf( "Renderer could not be created! SDL Error: %s\n", SDL_GetError() );
+            }
+            else
+            {
+                //Initialize renderer color
+                SDL_SetRenderDrawColor( gRenderer, 0, 0, 200, 0xFF );
+
+                //Initialize PNG loading
+                int imgFlags = IMG_INIT_PNG;
+                if( !( IMG_Init( imgFlags ) & imgFlags ) )
+                {
+                    printf( "SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError() );
+                }
+            }
+
+            gBackBuffer = SDL_CreateTexture(gRenderer,
+                                            SDL_GetWindowPixelFormat(gWindow),
+                                            SDL_TEXTUREACCESS_TARGET,
+                                            resX,
+                                            resY);
+
+            SDL_SetRenderTarget(gRenderer, gBackBuffer);
+        }
+    }
+}
+
+void gfxe_changeHz(int hz)
+{
+
+}
+
+int gfxe_returnHz(void)
+{
+    return 0;
+}
+
 void initGfxEngine()
 {
     int i;
@@ -354,6 +455,7 @@ SDL_Texture* loadTexture( char *filename )
 
 int loadImageTra(char *filename,int noImage,int hauteur,int largeur)
 {
+	printf("\n Chargement image %d : %s - %dx%d",noImage,filename,hauteur,largeur);
     imagesTra[noImage].surface = loadTexture( filename );
     imagesTra[noImage].hauteur = hauteur;
     imagesTra[noImage].largeur = largeur;

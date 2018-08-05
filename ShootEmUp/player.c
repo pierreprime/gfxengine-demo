@@ -33,6 +33,8 @@ void playerControl(){
             player.coolDown = PL_COOLDOWN;
         }
         ps_create((int)spr_getSpriteX(player.sprno), (int)spr_getSpriteY(player.sprno));
+
+        playSound(0, 0);
     }
 }
 

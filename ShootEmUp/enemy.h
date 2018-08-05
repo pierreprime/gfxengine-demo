@@ -12,6 +12,7 @@ typedef struct
     int sprno;
     int pv;
     int direction;
+    int warmup;
 } s_enemy;
 
 void en_init();

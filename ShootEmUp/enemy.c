@@ -1,6 +1,7 @@
 #include "myDefines.h"
 #include "../gfxengine_shared/bfg_spriteEngine.h"
 #include "enemy.h"
+#include "enemyShoot.h"
 
 s_enemy enemy[MAX_ENEMY];
 
@@ -13,6 +14,7 @@ void en_init(){
         enemy[i].sprno = -1;
         enemy[i].pv = 0;
         enemy[i].direction = 0;
+        enemy[i].warmup = 10;
     }
 }
 
@@ -31,6 +33,7 @@ int en_create(int type, int x, int y, int pv, int direction){
                     enemy[i].type = type;
                     enemy[i].direction = direction;
                     enemy[i].pv = pv;
+                    enemy[i].warmup = rnd_random2(50, 150);
                     spr_setSpriteAnimation2(enemy[i].sprno, 0, 12, yellow_enemy_animation, ANIM_LOOP);
                     spr_animateSprite(enemy[i].sprno, 0);
                     spr_moveSprite(enemy[i].sprno, x, y);
@@ -59,6 +62,16 @@ void en_intern_move_yellow(int eno)
     else if(spr_getSpriteX(enemy[eno].sprno) > (640 - 124)){
         spr_moveSprite(enemy[eno].sprno, (640 - 124), spr_getSpriteY(enemy[eno].sprno));
         enemy[eno].direction *= -1;
+    }
+
+    if(enemy[eno].warmup > 0)
+    {
+        enemy[eno].warmup--;
+    }
+    else
+    {
+        es_create(spr_getSpriteX(enemy[eno].sprno)+62, spr_getSpriteY(enemy[eno].sprno)+50);
+        enemy[eno].warmup = rnd_random2(50, 150);
     }
 }
 

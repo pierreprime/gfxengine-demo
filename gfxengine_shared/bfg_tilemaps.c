@@ -359,3 +359,13 @@ int tm_checkCollVerticalTileNumberTileMap(int x,int y,int hauteur,int tn_search)
 
 	return 0;
 }
+
+void tm_setTileNumberCurrentMap(int x,int y,int v)
+{
+    currentTilemap.tmap[x+(y*currentTilemap.mapLargeur)] = v;
+}
+
+void tm_setTileNumberCurrentMapDataLayer(int x,int y,int v)
+{
+    currentTilemap.tmapData[x+(y*currentTilemap.mapLargeur)] = v;
+}

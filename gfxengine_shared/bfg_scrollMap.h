@@ -1,5 +1,5 @@
 #ifndef SCROLLMAP_H
-#define TILESMAP_H
+#define SCROLLMAP_H
 
 #define MAX_TILESCROLL  10
 
@@ -100,4 +100,28 @@ int sm_convertXWorldInXScreen(int s,int xSourceValue);
  *
  */
 int sm_convertYWorldInYScreen(int s,int ySourceValue);
+
+/** \brief Retourne la valeur 1 de la tile de la scrollMap
+ *
+ * \param s : Numero du scrollMap
+ * \param x : Position x de la tile (tile)
+ * \param y : Position y de la tile (tile)
+ * \return Valeur de la tile
+ *
+ */
+int sm_getTileDefv1FromScrollMap(int s,int x,int y);
+
+/** \brief Retourne la valeur 1 de la tile de la scrollMap
+ *
+ * \param s : Numero du scrollMap
+ * \param x : Position x de la tile (pixel)
+ * \param y : Position y de la tile (pixel)
+ * \return Valeur de la tile
+ *
+ */
+int sm_getTileDefv1FromScrollWorld(int s,int x,int y);
+
+int sm_checkHorizontalTileDefv1FromScrollWorld(int s,int x,int y,int largeur,int v1_search);
+int sm_checkVerticalTileDefv1FromScrollWorld(int s,int x,int y,int hauteur,int v1_search);
+
 #endif

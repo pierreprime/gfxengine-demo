@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1533474647 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
+1533487212 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
@@ -327,7 +327,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1431338010 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_fileengine.c
+1431844160 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_fileengine.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -339,7 +339,7 @@
 	"./Gfxengine/bfg_GfxEngine_PC.c"
 	"./Gfxengine/bfg_GfxEngine_Dreamcast.c"
 
-1430147130 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.c
+1433753600 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.c
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 	<stdio.h>
@@ -351,17 +351,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1430214218 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.h
+1433753624 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_pc.h
 	<SDL2/SDL.h>
 	<stdlib.h>
 
-1431334960 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.c
+1433753678 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.c
 	<stdlib.h>
 	<kos.h>
 	<png/png.h>
 	"bfg_GfxEngine_Dreamcast.h"
 
-1431336592 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.h
+1433753730 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\gfxengine\bfg_gfxengine_dreamcast.h
 	<stdlib.h>
 	<kos.h>
 
@@ -372,48 +372,59 @@
 
 1430212272 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_rndengine.h
 
-1431337992 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.c
+1432738142 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.c
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_scrollMap.h"
 
-1431336018 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_gfxengine.h
+1431755280 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_gfxengine.h
 	"./Gfxengine/bfg_GfxEngine_PC.h"
 	"./Gfxengine/bfg_GfxEngine_Dreamcast.h"
+	"bfg_fileEngine.h"
+	"bfg_rndEngine.h"
+	"bfg_tilesmaps.h"
+	"bfg_scrollMap.h"
+	"bfg_sfxEngine.h"
+	"bfg_SpriteEngine.h"
+	"bfg_WriteEngine.h"
 
-1430213968 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.h
+1432738160 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_scrollmap.h
 
-1430216466 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_sfxengine.c
+1433522474 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_sfxengine.c
 	<kos.h>
 	<oggvorbis/sndoggvorbis.h>
+	"SDL_mixer.h"
+	<SDL2/SDL.h>
+	<stdio.h>
+	"../gfxengine_shared/bfg_sfxEngine.h"
 
-1431337976 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.c
+1433344038 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.c
 	"../gfxengine_shared/bfg_spriteEngine.h"
-	"../gfxengine_shared/bfg_GfxEngine.h"
+	"../gfxengine_shared/bfg_gfxEngine.h"
 	<png/png.h>
 	<kos.h>
 	<stdlib.h>
 	<stdio.h>
 
-1430216396 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.h
+1432902606 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.h
 	<stdlib.h>
 	<kos.h>
 	<stdlib.h>
 
-1431505928 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilemaps.c
+1432127134 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilemaps.c
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_tilesmaps.h"
 
-1431506662 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilesmaps.h
+1432733812 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilesmaps.h
 
-1431337946 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.c
+1433421672 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.c
 	<stdio.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
 
-1515117670 c:\users\prime\documents\devperso\jeu_developpe\shootemup\mydefines.h
+1533486570 c:\users\prime\documents\devperso\jeu_developpe\shootemup\mydefines.h
 
 1515114775 c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.h
 
-1533079335 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.c
+1533481367 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\player.c
 	"../gfxengine_shared/bfg_gfxEngine.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
 	"player.h"
@@ -427,14 +438,15 @@
 	"myDefines.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
 
-1533475151 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.c
+1533480154 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.c
 	"myDefines.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
 	"enemy.h"
+	"enemyShoot.h"
 
-1533473949 c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.h
+1533479861 c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.h
 
-1533475752 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.c
+1533481440 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.c
 	"collision.h"
 	"enemy.h"
 	"playerShoot.h"
@@ -450,4 +462,24 @@
 	"animatedObject.h"
 
 1533429456 c:\users\prime\documents\devperso\jeu_developpe\shootemup\animatedobject.h
+
+1433522498 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_sfxengine.h
+
+1433421692 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.h
+
+1432137852 c:\users\prime\documents\devperso\jeu_developpe\sdl2\sdl2_mixer-2.0.0\i686-w64-mingw32\include\sdl2\sdl_mixer.h
+	<SDL2/SDL_stdinc.h>
+	<SDL2/SDL_rwops.h>
+	<SDL2/SDL_audio.h>
+	<SDL2/SDL_endian.h>
+	<SDL2/SDL_version.h>
+	<SDL2/begin_code.h>
+	<SDL2/close_code.h>
+
+1533478575 c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemyshoot.h
+
+1533480563 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemyshoot.c
+	"enemyShoot.h"
+	"myDefines.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
 

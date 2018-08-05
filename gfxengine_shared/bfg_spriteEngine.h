@@ -54,7 +54,7 @@ typedef struct
     int animation_loop[MAX_ANIMATION]; /**< Flag de boucle pour animation */
     int animation_speed[MAX_ANIMATION];   /**< Vitesse d'une animation */
     int current_animation; /**< Animation courante (-1 = non anime) */
-    int current_animation_frame; /**< ImageBank courante */
+    int current_animation_frame; /**< numéro de frame courante courante */
     int intern1;	/**< Interne */
     int fin_animation; /**< 1 = fin d'animation ou une loop jouee */
     int rotcenter; /**< 0 = rotation par rapport au coin superieur gauche 1 = rotation au centre */
@@ -146,6 +146,17 @@ int spr_isSpriteCollidePerfect(int sprite1,int sprite2);
  *
  */
 int spr_isSpriteCollidePerfectCompress(int sprite1,int sprite2);
+
+/** \brief BETA : Teste la collision parfaite entre un sprites et une imageBank(Necessite un mask compresse charge en memoire)
+ *
+ * \param sprite1 : numero du 1er sprite
+ * \param x : position x de l'imageBank dans l'écran de jeu
+ * \param y : position y de l'imageBank dans l'écran de jeu
+ * \param ibno : numéro d'imageBank
+ * \return 0 - Pas de collision / 1 - Collision
+ *
+ */
+int spr_isSpriteCollideWithIBPerfectCompress(int sprite1,int x,int y,int ibno);
 
 /** \brief Compte le nombre de sprite actif
  *
@@ -382,6 +393,16 @@ void spr_stopAnimateSprite(int s);
  *
  */
 int spr_isSpriteCollide(int sprite1,int sprite2);
+
+/** \brief Informe si le sprite est reserve - utilise
+ *
+ * \param sprno : numero du 1er sprite
+ * \return 0 - libre / 1 - paslibre
+ *
+ */
+int spr_getUtilise(int sprno);
+
+int spr_getCurrentImageBank(int sprno);
 
 float spr_getSpriteZoomX(int n);
 float spr_getSpriteZoomY(int n);

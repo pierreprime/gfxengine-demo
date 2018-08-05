@@ -26,6 +26,12 @@
 #define	IMAGE_TRA14	14
 #define	IMAGE_TRA15	15
 
+#define RES_320x240 0
+#define RES_640x480 1
+
+#define HZ_AUTO     0
+#define HZ_FORCE_60 1
+
 /** \brief Structure contenant les donnees des images
  *
  *
@@ -100,7 +106,7 @@ typedef struct
 	float p3_x;/**< Technique */
 	float p3_y;/**< Technique */
 	float p4_x;/**< Technique */
-	float p4_y;/**< Technique */	
+	float p4_y;/**< Technique */
 } salpha;
 
 /** \brief Initialise le gfxEngine en 640*480
@@ -120,6 +126,31 @@ void initGfxEngine();
  *
  */
 void initGfxEngine320();
+
+/** \brief Nouvelle methode d'initialisation de la GfxEngine
+ *
+ * \param   Resolution : RES_320x240 ou RES_640x480
+ * \param   hz : HZ_AUTO ou HZ_FORCE_60
+ * \return
+ *
+ */
+void gfxe_init(int resolution,int hz);
+
+/** \brief Change le rafraichissement d'ecran (Dreamcast uniquement, ne fait rien sur PC)
+ *
+ * \param   hz : HZ_AUTO ou HZ_FORCE_60
+ * \return
+ *
+ */
+void gfxe_changeHz(int hz);
+
+/** \brief Renvoie la valeur du rafraichissement d'ecran
+ *
+ * \return 0 - VGA / 50 - PAL / 60 - NTSC / -1 - ERREUR
+ *
+ */
+int gfxe_returnHz(void);
+
 
 /** \brief Retourne la valeur de la resolution x en pixel
  *
@@ -288,7 +319,7 @@ int loadCompressMask(char *filename,int noImage);
  * \return
  *
  */
- 
+
 int getPixelCompressMask(int noImage,int x,int y);
 void freeCompressMask(int noImage);
 

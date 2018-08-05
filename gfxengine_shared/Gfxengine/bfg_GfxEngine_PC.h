@@ -25,6 +25,12 @@
 #define	IMAGE_TRA14	14
 #define	IMAGE_TRA15	15
 
+#define RES_320x240 0
+#define RES_640x480 1
+
+#define HZ_AUTO     0
+#define HZ_FORCE_60 1
+
 typedef struct si
 {
     int chargee;	// L'image est elle chargée ?
@@ -82,6 +88,11 @@ typedef struct al
 void destroyGfxEngine();
 void initGfxEngine();
 void initGfxEngine320();
+
+void gfxe_init(int resolution,int hz);
+void gfxe_changeHz(int hz);
+int gfxe_returnHz(void);
+
 int getResX(void);
 int getResY(void);
 void waitInMs(int ms);

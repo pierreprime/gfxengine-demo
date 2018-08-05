@@ -1,7 +1,7 @@
 #ifndef TILESMAP_H
 #define TILESMAP_H
 
-#define MAX_TILE 500
+#define MAX_TILE 4096
 
 /** \brief Structure contenant les donnees des definitions de tuiles (valeurs libres)
  *
@@ -216,7 +216,8 @@ int tm_checkCollHorizontalTileNumberTileMap(int x,int y,int largeur,int tn_searc
 int tm_checkCollVerticalTileNumberTileMap(int x,int y,int hauteur,int tn_search);
 
 
-
+void tm_setTileNumberCurrentMap(int x,int y,int v);
+void tm_setTileNumberCurrentMapDataLayer(int x,int y,int v);
 
 
 #endif

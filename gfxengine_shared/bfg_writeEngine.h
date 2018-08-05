@@ -14,6 +14,8 @@
  */
 void we_printString(int x,int y,char *chaine);
 
+void we_printChar(int x,int y,unsigned char c);
+
 /** \brief Affiche une valeur numerique de maniere graphique
  *
  *  IMPORTANT : Les alpha doivent-etre charge avec getImageAlpha (voir gfxEngine)

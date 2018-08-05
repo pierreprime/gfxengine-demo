@@ -29,6 +29,7 @@ void col_checkCollisionShootAlien(void)
                             ao_create(ANIMATED_BIG_EXPLOSION, spr_getSpriteX(en_getSprno(ano)), spr_getSpriteY(en_getSprno(ano)));
                             ps_destroy(psno);
                             en_destroy(ano);
+                            playSound(1, 0);
                         }
                         break;
                     }

@@ -3,6 +3,7 @@
 
 #define IMAGE_DECOR 0
 #define IMAGE_SPRITE 1
+#define IMAGE_FONT 2
 
 #define IB_ALIEN_F0 0
 #define IB_ALIEN_F1 1

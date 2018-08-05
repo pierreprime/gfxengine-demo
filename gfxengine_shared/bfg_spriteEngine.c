@@ -1,6 +1,6 @@
 #include "../gfxengine_shared/bfg_spriteEngine.h"
-#include "../gfxengine_shared/bfg_GfxEngine.h"
-	
+#include "../gfxengine_shared/bfg_gfxEngine.h"
+
 #ifndef PC_VERSION
     #include <png/png.h>
     #include <kos.h>
@@ -205,6 +205,97 @@ int spr_isSpriteCollidePerfectCompress(int sprite1,int sprite2)
 
 }
 
+int spr_isSpriteCollideWithIBPerfectCompress(int sprite1,int x,int y,int ibno)
+{
+	int rect1_x, rect1_y;
+	int rect2_x, rect2_y;
+	int i, j, k, l;
+
+	int coorx_1 = sprite[sprite1].posx;
+	int coory_1 = sprite[sprite1].posy;
+	int coorx_2 = x;
+	int coory_2 = y;
+	int sprite1w = imageBankTra[sprite[sprite1].ibno].sl;
+	int sprite1h = imageBankTra[sprite[sprite1].ibno].sh;
+	int sprite2w = imageBankTra[ibno].sl;
+	int sprite2h = imageBankTra[ibno].sh;
+    int imageTraNo1 = imageBankTra[sprite[sprite1].ibno].image_source;
+    int imageTraNo2 = imageBankTra[ibno].image_source;
+
+	if (sprite[sprite1].utilise==0) return 0;
+
+	/*Détection par bounding box
+	Retourne 0 et sort de la fonction
+	si les sprites ne possédent pas de zones superposées*/
+
+	if(coorx_1 > coorx_2+imageBankTra[ibno].sl) return 0;
+	if(coorx_1+imageBankTra[sprite[sprite1].ibno].sl < coorx_2) return 0;
+	if(coory_1 > coory_2+imageBankTra[ibno].sh) return 0;
+	if(coory_1+imageBankTra[sprite[sprite1].ibno].sh < coory_2) return 0;
+
+
+
+	/*Le but des lignes suivantes est de définir un
+	rectangle qui englobe la zone d'affichage
+	commune aux deux sprites
+	On traite les coordonnées x du rectangle*/
+	if (coorx_1 < coorx_2)
+	{
+		rect1_x = coorx_2;
+		if (coorx_1 + sprite1w >= coorx_2 + sprite2w)
+			rect2_x = coorx_2 + sprite2w;
+		else
+			rect2_x = coorx_1 + sprite1w;
+	}
+	else
+	{
+		rect1_x = coorx_1;
+		if (coorx_2 + sprite2w >= coorx_1 + sprite1w)
+			rect2_x = coorx_1 + sprite1w;
+		else
+			rect2_x = coorx_2 + sprite2w;
+	}
+
+	/*On traite les coordonnées y du rectangle*/
+	if (coory_1 < coory_2)
+	{
+		rect1_y = coory_2;
+		if (coory_1 + sprite1h >= coory_2 + sprite2h)
+			rect2_y = coory_2 + sprite2h;
+		else
+			rect2_y = coory_1 + sprite1h;
+	}
+	else
+	{
+		rect1_y = coory_1;
+		if (coory_2 + sprite2h > coory_1 + sprite1h)
+            rect2_y = coory_1 + sprite1h;
+		else
+			rect2_y = coory_2 + sprite2h;
+	}
+
+
+	/*Il ne reste plus qu'à tester pour chaque
+	pixel du rectangle précèdemment défini si ses pixels
+	sont transparents
+	Un pixel non transparent signifie qu'un bout de sprite
+	est present dans le rectangle
+	et donc que les sprites sont en collision*/
+
+	for (i = rect1_x - coorx_1, j = rect1_x - coorx_2;i < rect2_x - coorx_1; i++, j++)
+	{
+		for (k = rect1_y - coory_1, l = rect1_y - coory_2;k < rect2_y - coory_1; k++, l++)
+		{
+			if((getPixelCompressMask(imageTraNo1, i+imageBankTra[sprite[sprite1].ibno].sx, k+imageBankTra[sprite[sprite1].ibno].sy) != 0) && (getPixelCompressMask(imageTraNo2, j+imageBankTra[ibno].sx, l+imageBankTra[ibno].sy) != 0))
+			{
+				return 1;
+			}
+		}
+	}
+
+	return 0;
+
+}
 
 int spr_count_used_sprites(void)
 {
@@ -390,7 +481,11 @@ void spr_releaseAllSprite()
 void spr_animateSprite(int s,int a)
 {
     if (s==-1) return;
-    if (a==sprite[s].current_animation) return;
+    if (a==sprite[s].current_animation)
+    {
+        if ((sprite[s].animation_loop[a])==ANIM_LOOP) return;
+        else if (sprite[s].fin_animation==0) return;
+    }
 
     sprite[s].ibno=sprite[s].animation[a][0];
     sprite[s].current_animation = a;
@@ -777,7 +872,7 @@ float spr_getSpriteX(int n)
 
 float spr_getSpriteY(int n)
 {
-    return sprite[n].posy;
+   return sprite[n].posy;
 }
 
 int spr_getFinAnimation(int sprno)
@@ -1185,4 +1280,14 @@ void ms_stopAnimatePart(int msno,int pno)
 {
     msprite[msno].part[pno].animate = 0;
     msprite[msno].part[pno].anim_offset=0;
+}
+
+int spr_getUtilise(int sprno)
+{
+   return sprite[sprno].utilise;
+}
+
+int spr_getCurrentImageBank(int sprno)
+{
+    return sprite[sprno].ibno;
 }

@@ -24,6 +24,11 @@ void we_printString(int x,int y,char *chaine)
     }
 }
 
+void we_printChar(int x,int y,unsigned char c)
+{
+      blitImageAlpha(c,x,y);
+}
+
 void we_printInt(int x,int y,int valeur)
 {
     int decal;
@@ -31,7 +36,7 @@ void we_printInt(int x,int y,int valeur)
     int offset;
     char chaine[20];
 
-	sprintf(chaine, "%d", valeur);	    
+	sprintf(chaine, "%d", valeur);
     chaine[19]='\0';
 
     decal = 0;

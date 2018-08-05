@@ -1,6 +1,8 @@
 #ifndef SFXENGINE_H
 #define SFXENGINE_H
 
+#define MAX_SAMPLES 15
+
 /** \brief Charge un bruitage
  *
  * \param *filename : Chemin + nom du fichier
@@ -29,12 +31,6 @@ void clearSound(int soundNumber);
  */
 void clearAllSound (void);
 
-/** \brief NE SERT A RIEN POUR LE MOMENT
- *
- *
- */
-void quitSoundEngine();
-
 /** \brief Initialise le moteur musique/sons
  *
  *
@@ -46,13 +42,15 @@ void initSfxEngine(void);
  * \param *filename : Chemin + nom du fichier
  *
  */
-void playMusic(char *filename);
+void playMusic(char *filename,int loop);
 
 /** \brief Stoppe la musique
  *
  *
  */
 void stopMusic(void);
+
+int isMusicPlay(void);
 
 /** \brief Libere la memoire du sfxEngine
  *
