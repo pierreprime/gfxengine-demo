@@ -7,9 +7,10 @@ KallistiOS, the open-source OS for Dreamcast : http://cadcdev.sourceforge.net/so
 SDL Wiki : https://wiki.libsdl.org/FrontPage
 
 ## How to deploy to Dreamcast
-The emulator used to test deployment was nulldc.
+The emulator used to test deployment was nulldc. Check episodes 17-19.<br/>
+https://www.youtube.com/watch?v=cCMvKd41dNE
 
 ## todo
-More explicit renaming for variables and constants
-Adapt project to more user friendly IDE like CLion
-Add info about Dreamcast deployment hardware
+More explicit renaming for variables and constants<br/>
+Adapt project to more user friendly IDE like CLion<br/>
+Add info about Dreamcast deployment hardware<br/>
