@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>Configuring Code::Blocks</title>
+</head>
+<body>
+
+<h1>Configuring Code::Blocks</h1>
+
+This guide will walk you through the steps it takes to set up Code::Blocks to compile Dreamcast programs.<br><br>
+
+<h2>Automating this process</h2>
+<ol>
+	<li>
+	  If you look inside <code>Extras\IDEs</code> on this CD there's a program inside <code>codeblocks-dcscripts.7z</code> named <code>configurator.exe</code> that will do all this for you. Double-click it, answer Yes and that's it. Just make sure you extract everything first because it will copy <code>bin2o.exe</code> to KOS as it's used as a tool inside Code::Blocks.
+	</li>
+</ol>
+
+<h2>Setting up the compiler</h2>
+<ol>
+	<li>
+	  Open Code::Blocks.
+	</li>
+	<li>
+	  In the menu bar goto "Settings", "Compiler and debugger..."
+	</li>
+	<li>
+	  Select "GNU GCC Compiler" from the "Selected compiler" drop-down box, click "Copy" and type <code>Dreamcast sh-elf (dependent)</code> then click OK.
+	</li>
+	<li>
+	  Now under the main tab "Compiler settings" click the sub-tab "Other options" and enter the following into the textbox:<br><br>
+	  <code>
+	    -ml -m4-single-only -g -fno-builtin -fno-optimize-sibling-calls -fno-strict-aliasing -D_arch_dreamcast -D_arch_sub_pristine -Wall -Os
+	  </code><br><br>
+	</li>
+	<li>
+	  Under the main tab "Linker settings" enter the following into the "Other linker options" texbox:<br><br>
+	  <code>
+	    -ml -m4-single-only -Wall -nostdlib -nostartfiles -lstdc++ -Wl,-Ttext=0x8c010000 -Wl,--start-group -lkallisti -lc -lgcc -Wl,--end-group
+	  </code><br><br>
+	</li>
+	<li>
+	  Under the main tab "Search directories" click the sub-tab "Compiler" and add the following folders:<br><br>
+	  <code>
+	    C:\cygwin\usr\local\dc\kos\kos-ports\include<br>
+	    C:\cygwin\usr\local\dc\kos\kos\include<br>
+	    C:\cygwin\usr\local\dc\kos\kos\kernel\arch\dreamcast\include<br>
+	    C:\cygwin\usr\local\dc\kos\kos\addons\include<br>
+	    C:\cygwin\usr\local\dc\sh-elf\include\c++\3.4.6
+	  </code><br><br>
+      Click the "Linker" sub-tab and add the following folders:<br><br>
+      <code>
+	    C:\cygwin\usr\local\dc\kos\kos\lib\dreamcast<br>
+        C:\cygwin\usr\local\dc\kos\kos\addons\lib\dreamcast
+	  </code><br><br>
+	</li>
+	<li>
+	  Under the main tab "Toolchain executables" set the "Compiler's installation directory" to:<br><br>
+	  <code>
+	    C:\cygwin\usr\local\dc\sh-elf
+	  </code><br><br>
+      and change the programs to:<br><br>
+	  <table style="text-align: left; width: 300px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+	    <td>C compiler:</td>
+        <td><code>sh-elf-gcc.exe</code></td>
+      </tr><tr>
+	    <td>C++ compiler:</td>
+        <td><code>sh-elf-g++.exe</code></td>
+	  </tr><tr>
+	    <td>Linker for dynamic libs:</td>
+        <td><code>sh-elf-g++.exe</code></td>
+      </tr><tr>
+        <td>Linker for static libs:</td>
+        <td><code>sh-elf-ar.exe</code></td>
+      </tr><tr>
+	    <td>Debugger:</td>
+        <td><code>sh-elf-gdb.exe</code></td>
+      </tr><tr></tbody></table><br>
+      The rest can be left as-is.<br><br>
+      Click the "Additional Paths" sub-tab and add the following folder:<br><br>
+      <code>
+	    C:\cygwin\bin
+	  </code><br><br>
+	</li>
+	<li>
+	  Under the main tab "Other settings" click on "Advanced options..." then the "Commands" tab. In the "Command" drop-down list click on "Link object files to console execuatable". Under "Command line macro", replace the text in the textbox with the following:<br><br>
+	  <code>
+	    $linker $libdirs -o $exe_output "C:\cygwin\usr\local\dc\kos\kos\kernel\arch\dreamcast\kernel\startup.o" $link_objects $link_resobjects $link_options $libs
+	  </code><br><br>
+	</li>
+	<li>
+	  Click OK.
+	</li>
+	<li>
+	  Select <code>Debugger settings</code> on the left side of the settings window.
+	</li>
+	<li>
+	  Type in <code>target remote: 2159</code> inside the "Debugger initialization commands" textbox and check "Do *not* run the debugee."
+	</li>
+	<li>
+	  Click OK then close Code::Blocks to save the Dreamcast compiler settings.
+	</li>
+</ol>
+
+<h2>Setting up the wizard</h2>
+<ol>
+	<li>
+	  Extract the <code>dreamcast</code> folder from <code>\Extras\IDE\codeblocks-dcscripts.7z</code> (on this CD) to <code>C:\Program Files\CodeBlocks\share\CodeBlocks\templates\wizard</code>.
+	</li>
+	<li>
+	  Open <code>C:\Program Files\CodeBlocks\share\CodeBlocks\templates\wizard\config.script</code> in a text editor and add <code>RegisterWizard(wizProject,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T("dreamcast"),&nbsp;&nbsp;&nbsp;&nbsp;_T("Dreamcast application"),&nbsp;_T("Dreamcast"));</code> after <code>// project wizards</code>:<br><br>
+      It should look like this if done correctly:<br><br>
+	  <code>
+	    &nbsp;&nbsp;&nbsp;&nbsp;//<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;// project wizards<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;//<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;RegisterWizard(wizProject,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T("dreamcast"),&nbsp;&nbsp;&nbsp;&nbsp;_T("Dreamcast application"),&nbsp;_T("Dreamcast"));<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;RegisterWizard(wizProject,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T("empty"),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T("Empty project"),&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_T("Console"));
+	  </code><br><br>
+	</li>
+	<li>
+	  Save and close <code>config.script</code>
+	</li>
+</ol>
+
+<h2>Setting up some tools</h2>
+<ol>
+	<li>
+	  Open Code::Blocks and goto "Tools", "Configure tools...".
+	</li>
+	<li>
+	  Click "Add" and enter the following:<br><br>
+	  <table style="text-align: left; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+        <td>Name:</td>
+        <td><code>genromfs (dep)</code></td>
+      </tr><tr>
+        <td>Execuatable:</td>
+        <td><code>C:\cygwin\usr\local\dc\kos\kos\utils\genromfs\genromfs.exe</code></td>
+      </tr><tr>
+        <td>Parameters:</td>
+        <td><code>-f "${PROJECT_DIR}romdisk.img" -d "${PROJECT_DIR}romdisk" -v -x .svn</code></td>
+      </tr><tr>
+        <td>Launching options:</td>
+        <td><code>Launch tool visible (without output redirection)</code></td>
+      </tr></tbody></table><br>
+      Click OK, then click "Add" once more and add the following information:<br><br>
+      <table style="text-align: left; width: 800px;" border="0" cellpadding="0" cellspacing="0">
+	  <tbody><tr>
+        <td>Name:</td>
+        <td><code>bin2o (dep)</code></td>
+      </tr><tr>
+        <td>Execuatable:</td>
+        <td><code>C:\cygwin\usr\local\dc\kos\kos\utils\bin2o\bin2o.exe</code></td>
+      </tr><tr>
+        <td>Parameters:</td>
+        <td><code><i>leave empty</i></code></td>
+      </tr><tr>
+        <td>Launching options:</td>
+        <td><code>Launch tool visible (without output redirection)</code></td>
+      </tr></tbody></table><br>
+	</li>
+	<li>
+	  Close Code::Blocks.
+	</li>
+	<li>
+	  Extract <code>bin2o.exe</code> from <code>\Extras\IDE\codeblocks-dcscripts.7z</code> (on this CD) to <code>C:\cygwin\usr\local\dc\kos\kos\utils\bin2o</code> and copy <code>cygwin1.dll</code> from <code>C:\cygwin\bin</code> to <code>C:\cygwin\usr\local\dc\kos\kos\utils\genromfs</code>.
+	</li>
+</ol>
+
+Code::Blocks is now setup and ready to compile Dreamcast programs.
+
+</body>
+</html>

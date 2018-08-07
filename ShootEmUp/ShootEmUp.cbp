@@ -102,6 +102,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="playerShoot.h" />
+		<Unit filename="score.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="score.h" />
 		<Unit filename="workflow.c">
 			<Option compilerVar="CC" />
 		</Unit>

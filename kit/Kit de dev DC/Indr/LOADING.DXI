@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<INTRO>
+  <IMAGE SRC="/cd/Indr/Loading.png" DELAY='0' NOFADEIN='1' NOFADEOUT='1'/>
+</INTRO>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Updating dctool\dcload IP to the latest subversion</title>
+</head>
+<body>
+
+<h1>Updating dctool\dcload IP to the latest subversion</h1>
+
+This will guide walk you through the steps it takes to update dctool\dcload IP to the latest subversion.<br><br>
+
+<h2>Downloading dctool\dcload IP svn</h2>
+<ol>
+    <li>
+        First, open Cygwin and change directories to <code>/usr/local/dc</code>.<br><br>
+        <code>
+          cd /usr/local/dc
+        </code><br><br>
+    </li>
+    <li>
+      Now, you need to download the latest dctool\dcload IP svn using Cygwin:<br><br>
+      <code>
+        svn co https://cadcdev.svn.sourceforge.net/svnroot/cadcdev/dcload/dcload-ip
+      </code><br><br>
+    <li>
+      If you do not need the .svn folders Subversion generated, you can type in the following:<br><br>
+      <code>
+        cd /usr/local/dc/dcload-ip<br>
+        rm -rf `find . -type d -name .svn`
+      </code><br><br>
+    </li>
+</ol>
+
+<h2>Compiling dctool\dcload IP</h2>
+<ol>
+    <li>
+      In order to compile dctool\dcload IP in Cygwin, we need to open <code>dcload-ip\Makefile.cfg</code> in a text editor and change a couple variables.<br><br>
+      The first variable is the host flags, <code>HOSTCFLAGS</code>. By default, <code>HOSTCFLAGS</code> in set to compile under a non-Cygwin environment so it needs needs to be commented out and the flags for Cygwin needs to be uncommented. It should look like this if done correctly:<br><br>
+      <code>
+        <span style="color: rgb(0, 102, 0);"># host compiler and flags</span><br>
+        HOSTCC = gcc<br>
+        <span style="color: rgb(0, 102, 0);">#HOSTCFLAGS = -O2</span><br>
+        <span style="color: rgb(0, 102, 0);"># cygwin may need this</span><br>
+        HOSTCFLAGS = -O2 -D_WIN32
+      </code><br><br>
+      The second variable is the path to libbfd. Again, these variables are set to compile under a non-Cygwin environment so comment out the default variables <code>BFDLIB</code> and <code>BFDINCLUDE</code> and uncomment the variables setup for Cygwin. It should look like this if done correctly:<br><br>
+      <code>
+        <span style="color: rgb(0, 102, 0);"># you may have to change the paths for BFDLIB and BFDINCLUDE to</span><br>
+        <span style="color: rgb(0, 102, 0);"># the correct ones for your system</span><br><br>
+
+        <span style="color: rgb(0, 102, 0);"># these must point to your sh-elf bfd, not the system one</span><br>
+        <span style="color: rgb(0, 102, 0);">#BFDLIB		= -L/usr/local/dcdev/lib -lbfd -liberty</span><br>
+        <span style="color: rgb(0, 102, 0);">#BFDINCLUDE	= /usr/local/dcdev/include</span><br><br>
+        
+        <span style="color: rgb(0, 102, 0);"># cygwin</span><br>
+        <span style="color: rgb(0, 102, 0);"># these must point to your sh-elf bfd, not the system one</span><br>
+        BFDLIB		= -L/usr/local/lib -lbfd -liberty -lintl<br>
+        BFDINCLUDE	= /usr/local/include<br><br>
+
+        <span style="color: rgb(0, 102, 0);"># MinGW</span><br>
+        <span style="color: rgb(0, 102, 0);"># these must point to your sh-elf bfd, not the system one</span><br>
+        <span style="color: rgb(0, 102, 0);">BFDLIB		= -L/usr/local/lib -lbfd -liberty -lws2_32 -lwsock32</span><br>
+        <span style="color: rgb(0, 102, 0);">BFDINCLUDE	= /usr/local/include</span>
+      </code><br><br>
+      Optionally, you can set <code>DREAMCAST_IP</code> to the IP address your BBA or LAN adaptor uses. Otherwise ARP will be needed.<br><br>
+      You can now Save and Close <code>Makefile.cfg</code>.<br><br>
+    </li>
+    <li>
+      Open Cygwin and type the following:<br><br>
+      <code>
+        cd /usr/local/dc/dcload-ip<br>
+        make && make install
+      </code><br><br>
+    </li>
+    <li>
+      Once compiled, you can find dctool in <code>/usr/local/dc/bin</code> and dcload's unscrambled <code>1ST_READ.BIN</code> in <code>/usr/local/dc/dcload-ip/target-src/1st_read</code>.
+    </li>
+</ol>
+
+You now have the current svn for dctool and dcload IP.<br><br>
+
+</body>
+</html>

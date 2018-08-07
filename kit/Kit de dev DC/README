@@ -1,0 +1,71 @@
+DC Development ISO R4
+by fackue <dreamcasthelp@gmail.com>
+http://dchelp.dcemulation.com
+
+An easy to install Dreamcast Development Environment using Cygwin.
+
+What's new:
+- GDB and Insight included for Debugging
+- KallistiOS 1.3 updated to svn 561
+- dc-load IP\Serial 1.0.4 updated to svn 556
+- dc-tool IP\Serial 1.0.4 included in /kos/utils/dctool
+- scramble included in /kos/utils/scramble
+- SGE (SDL Graphics Extensions) lib by BlueCrab
+- SDL examples by Chui included
+- More tutorials (Insight, Updating dc-tool)
+- Links to most DC related sites
+- "make" package in Cygwin problems hopefully fixed
+- Default SDL has been patched to work right
+- SDL sources and headers reorganized
+- libGLX by Chui and updated SDL libs
+- toolchain rebuilt with the fixed newlib patch
+- DreamInducer theme fixed
+
+Credits & Thanks:
+- BlackAura
+- GPF
+- MetaFox
+- quzar
+- c99koder
+- Atani
+- BlueCrab
+- henzenmann
+
+History:
+r3
+- GCC toolchain updated (3.4.6)
+- KallistiOS updated (1.3 svn 385) - November 26, 2006
+- extra KOS libs
+	- FreeType 2.1.3 by BlueCrab
+	- lib3ds by SWAT
+	- lib7z by SWAT
+	- libkglx by Heinrich Tillack
+	- liblzma by SWAT
+	- libmxml by SWAT
+	- libpbm by SWAT
+	- libpng 1.2.8 by chui
+	- SDL 1.2.9 by chui
+	- SDL_flic by chui
+	- SDL_gfx by chui
+	- SDL_image 1.2.4 by chi
+	- SDL_mixer 1.2.6 by chui
+	- SDL_prim 0.2.1 by BlueCrab
+	- SDL_ttf 2.0.7 by SWAT
+	- SFont by chui
+	- zlib 1.2.3 by chui
+- manual setup tutorial
+- 1ST_READ.BIN Checker, BootDreams, dc-tool GUI and IP.BIN Writer
+- Dreamcast emulators Chankast (new BIN loader) and DEMUL
+
+r2
+- Newest Cygwin installer
+- KOS 1.3 SVN 287 (December 6, 2005)
+- dcload IP\Serial 1.0.4 (put this CD in your Dreamcast)
+- PC tools included (SVN, CodeBlocks, Dev-C++, dctool)
+- Along with SVN is instruction to updating to the latest KOS SVN
+- PC Dreamcast emulators included (Chankast and dcemu)
+- New icon for the autorun program
+- Now uses 7zip for the tool-chain
+
+r1
+- Initial release

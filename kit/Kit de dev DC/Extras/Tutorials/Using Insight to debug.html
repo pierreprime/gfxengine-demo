@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Using Insight to debug</title>
+</head>
+<body>
+
+<h1>Using Insight to debug</h1>
+
+This will guide walk you through the steps it takes to get you on your way to debugging your Dreamcast programs using Insight.<br><br>
+
+<h2>Setting up your Code for Debugging</h2>
+<ol>
+    <li>
+      First, make sure you have Insight correctly installed. You can do that by opening Cygwin and typing <code>sh-elf-insight.exe</code>. If Insight doesn't run, refer to the "Downloading and Compiling the toolchain" step in <code>Manual Setup.html</code>. If Insight ran go ahead and close it for now.<br><br>
+    </li>
+    <li>
+      OK, now that you have Insight setup lets go ahead and open your source file that has <code>main{}</code>. All this information is actually in dc-tool's README but I'll go on as it fails to mention what header you need. Add <code>gdb_init();</code> somewhere at the start of <code>main{}</code> and add <code>#include &lt;arch/gdb.h&gt;</code> anywhere in your source, so long as it's included at compile-time.<br><br>
+      Here's a quite example I wrote to demonstrate how it should look:<br><br>
+      <code>
+        #include &lt;kos.h&gt;<br>
+        #include &lt;arch/gdb.h&gt;<br><br>
+
+        int main(int argc, char **argv)<br>
+        {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;gdb_init();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("\nHello world!\n\n");<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+        }
+      </code><br><br>
+      Save it once the changes are applied.<br><br>
+    </li>
+    <li>
+	  The next step is adding <code>-g</code> to your compiler line in your Makefile. This is only necessary if you don't use <code>KOS_CFLAGS</code> because <code>-g</code> is already defined there.<br><br>
+	  If any changes were made go ahead and save it.<br><br>
+	</li>
+	<li>
+	  Once all the changes have been applied, build your project. Make sure you don't delete the ELF binary as it holds the debugging information.
+	</li>
+</ol>
+
+<h2>Uploading the binary and using Insight</h2>
+<ol>
+    <li>
+	  Now that you have your ELF, boot up your Dreamcast with your dc-load disc. Make sure you're running dc-load\dc-tool 1.0.4 or newer as GDB support was introduced in this version.<br><br>
+	  Upload your binary using the <code>-g</code> switch in dc-tool:<br><br>
+	  <code>
+	    dc-tool -g -x hello.elf<br><br>
+	  </code>
+	  Once the binary is uploaded and executed dc-tool will tell you it's "waiting for gdb client connection."<br><br>
+	  Note: Make sure to put <code>-g</code> at the beginning, otherwise, dc-tool may not recognize it.<br><br>
+    </li>
+    <li>
+	  Open Cygwin and open Insight by typing <code>sh-elf-insight.exe</code>.<br><br>
+	  <i>NOTE: You can also append your ELF's filename to that which will tell Insight to open your ELF, as long as you're in the folder the ELF's in. If you manage to do this then you don't need to open the ELF once Insight opens (i.e. File, Open -- the entire next paragraph).</i><br><br>
+	  Once Insight is opened, goto File, Open and select the ELF you uploaded to your Dreamcast. If all went well you should see some familiar code load into the source window. If you don't see any code, you may have forgotten to add <code>-g</code> to your compiler line when you compiled your program.<br><br>
+	  Before you connect Insight to dc-tool you need to set some breakpoints. You can do that by clicking "-" in the left margin.<br><br>
+	  Finally, goto Run, Connect to target. In the "Connection" frame set the fields as follows:<br><br>
+	  <u>dc-tool IP:</u><br>
+	  <b>Target:</b> GDBserver/TCP<br>
+	  <b>Hostname:</b> <i>empty</i><br>
+	  <b>Port:</b> 2159<br><br>
+	  <u>dc-tool Serial:</u><br>
+	  <b>Target:</b> GDBserver/Serial<br>
+	  <b>Baud Rate:</b> <i>same baudrate used for dc-tool</i><br>
+	  <b>Port:</b> 2159<br><br>
+    </li>
+    <li>
+      Click OK and wait for Insight to connect.
+    </li>
+</ol>
+
+Congratulations! You are now on your way to debugging your Dreamcast programs using Insight.
+
+</body>
+</html>

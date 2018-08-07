@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<THEME>
+  <INFO>
+    <AUTHOR VALUE="fackue"/>
+    <TITLE VALUE="DC Development ISO R4"/>
+  </INFO>
+  <FONT SRC="/cd/Indr/Font.png"/>
+  <LAYOUT ELEMENTS="8">
+    <IMAGE X="0" Y="0" Z="8" W="640" H="480" SRC="/cd/Indr/Back.png" MODE="ARGB1555"/>
+    <LIST X="210" Y="175" Z="32" W="375" H="150" R="255" G="255" B="255" FONT="22"/>
+    <DESC X="122" Y="350" Z="32" W="480" H="120" R="255" G="255" B="255" FONT="18"/>
+  </LAYOUT>
+</THEME>

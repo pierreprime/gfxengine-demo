@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LIST ENTRIES='4' THEME="/cd/Indr/Theme.dxt" MODE="RGB565">
+  <ITEM
+    TITLE="      DCHakker"
+    DESCRIPTION="For users who don't own a broadband adaptor,#        LAN adaptor, or coders cable."
+    TARGET="/cd/Indr/Apps/dchakker.bin"
+    PREROLL="/cd/Indr/Loading.dxi"/>
+  <ITEM
+    TITLE="     dc-load IP"
+    DESCRIPTION="For users who own a broadband or LAN adaptor."
+    TARGET="/cd/Indr/Apps/dcload_ip_104.bin"
+    PREROLL="/cd/Indr/Loading.dxi"/>
+  <ITEM
+    TITLE="   dc-load Serial"
+    DESCRIPTION="      For users who own a coders cable."
+    TARGET="/cd/Indr/Apps/dcload_serial_104.bin"
+    PREROLL="/cd/Indr/Loading.dxi"/>
+  <ITEM
+    TITLE="      DemoMenu"
+    DESCRIPTION="For users who don't own a broadband adaptor,#        LAN adaptor, or coders cable."
+    TARGET="/cd/Indr/Apps/demomenu.bin"
+    PREROLL="/cd/Indr/Loading.dxi"/>
+</LIST>
+

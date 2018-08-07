@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Updating KOS to the latest subversion</title>
+</head>
+<body>
+
+<h1>Updating KOS to the latest subversion</h1>
+
+This will guide walk you through the steps it takes to update KOS to the latest subversion.<br><br>
+
+<h2>Using Subversion to Update KallistiOS svn</h2>
+<ol>
+	<li>
+	  If you have the <code>.svn</code> folders for KOS then the easiest way to update KOS is:<br><br>
+	  <code>
+	    cd /usr/local/dc/kos/kos<br>
+	    svn up<br>
+	    cd ../kos-ports<br>
+	    svn up
+	  </code><br><br>
+	  Once KOS is updated you can safely close this tutorial.
+	</li>
+</ol>
+
+<h2>Downloading KallistiOS svn</h2>
+<ol>
+    <li>
+      First, you need to remove KOS that's currently used.
+    </li>
+    <li>
+      Open Cygwin and type the following:<br><br>
+      <code>
+        cd /usr/local/dc/kos<br>
+        rm -rf kos kos-ports
+      </code><br><br>
+    </li>
+    <li>
+      Now you can download the latest KallistiOS svn using Cygwin:<br><br>
+      <code>
+        svn co https://cadcdev.svn.sourceforge.net/svnroot/cadcdev/kos<br>
+        svn co https://cadcdev.svn.sourceforge.net/svnroot/cadcdev/kos-ports
+      </code><br><br>
+    <li>
+      Copy over <code>environ.sh.sample</code>:<br><br>
+      <code>
+        cd kos<br>
+        cp doc/environ.sh.sample environ.sh
+      </code><br><br>
+    </li>
+    <li>
+      Open <code>environ.sh</code> in a text editor and set the following variables:<br><br>
+      <code>
+        KOS_BASE: "/usr/local/dc/kos/kos"<br>
+        PATH: "${PATH}:${KOS_CC_BASE}/bin:${DC_ARM_BASE}/bin:${KOS_CC_BASE}/sh-elf/bin"
+      </code><br><br>
+    </li>
+    <li>
+      If you do not need the .svn folders Subversion generated, open Cygwin and type in the following:<br><br>
+      <code>
+        cd /usr/local/dc/kos<br>
+        rm -rf `find . -type d -name .svn`
+      </code><br><br>
+    </li>
+</ol>
+
+<h2>Compiling KallistiOS</h2>
+<ol>
+    <li>
+      Open Cygwin and type the following:<br><br>
+      <code>
+        cd /usr/local/dc/kos/kos<br>
+        source environ.sh<br>
+        make<br>
+        cd ../kos-ports<br>
+        make
+      </code><br><br>
+    </li>
+    <li>
+      Now, if you want the extra kos-ports libraries you can extract <code>kosports-extras.7z</code> (located in the <code>Toolchain</code> folder on this CD), into <code>/usr/local/dc</code>.<br><br>
+	  Note: Do not overwrite any folders, only files (<code>Makefile</code>, <code>environ.sh</code>). The libs are precompiled.
+    </li>
+</ol>
+
+KOS is now updated to the latest svn and is ready to use.
+
+</body>
+</html>

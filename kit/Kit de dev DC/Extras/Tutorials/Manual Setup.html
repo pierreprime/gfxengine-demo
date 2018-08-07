@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Manually setting up a Dreamcast environment</title>
+</head>
+<body>
+
+<h1>Manually setting up a Dreamcast environment</h1>
+
+This will guide walk you through the steps it takes to set up your own Dreamcast development environment.<br><br>
+
+<h2>Installing Cygwin</h2>
+<ol>
+    <li>
+      <a href="http://www.cygwin.com/setup.exe">Download</a> the Cygwin installer.
+    </li>
+    <li>
+      Select Install from Internet.
+    </li>
+    <li>
+      Install a default setup with these packages:
+    </li>
+    <ul>
+      <li>Devel</li>
+      <ul>
+        <li>binutuils</li>
+        <li>bison</li>
+        <li>flex</li>
+        <li>gcc-core</li>
+        <li>gcc-g++</li>
+        <li>gettext</li>
+        <li>make</li>
+        <li>patchutils</li>
+        <li>subversion</li>
+      </ul>
+      <li>Libs</li>
+      <ul>
+        <li>jpeg</li>
+        <li>libpng12</li>
+        <li>libpng12-devel</li>
+      </ul>
+      <li>Web</li>
+      <ul>
+        <li>wget</li>
+      </ul>
+    </ul>
+    <li>Install.</li>
+</ol>
+
+<h2>Using the Pre-Compiled toolchain</h2>
+<ol>
+    <li>
+      To use the pre-compiled toolchain extract <code>Toolchain\gcc-346-toolchain.7z</code> to <code>/usr/local/dc/</code>.
+    </li>
+    <li>
+      Once it is fully extracted, move onto "Downloading KallistiOS."
+    </li>
+</ol>
+
+<h2>Downloading and Compiling the toolchain</h2>
+<ol>
+    <li>
+      Open Cygwin and type:<br><br>
+      <code>
+        cd /usr/local/dc/kos/kos/utils/dc-chain
+      </code><br><br>
+    </li>
+    <li>
+      Open dc-chain's Makefile in a text editor and set <code>kos_root</code> to <code>/usr/local/dc/kos</code>. Also in order for the toolchain to compile in Cygwin, add "<code>--disable-libstdcxx-pch</code>" to GCC pass 2's configure line (line 167 and 168). I added it before "<code>$(to_log)</code>" on line 168. It should look like this if done correctly:<br><br>
+      <code>
+        cd $(build) ../$(src_dir)/configure --target=$(target) --prefix=$(prefix) --with-newlib \<br>
+        &nbsp;&nbsp;&nbsp;--enable-threads=$(thread_model) --enable-languages=c,c++ --disable-libstdcxx-pch $(to_log)
+      </code><br><br>
+    </li>
+    <li>
+      dc-chain has two scripts which does all the downloading, extracting and compiling work for you. Simply type the following to download, extract and compile the toolchain:<br><br>
+      <code>
+        bash download.sh<br>
+        bash unpack.sh<br>
+        make
+      </code><br><br>
+    </li>
+    <li>
+      If you want to use GDB and\or Insight (for debugging) you can compile Insight by typing:<br><br>
+      <code>
+        make insight
+      </code><br><br>
+	  This also compiles GDB for you. If you just want GDB, you can type:<br><br>
+	  <code>
+	    make gdb
+	  </code><br><br>
+    </li>
+    <li>
+      Once done, the toolchain will be inside <code>/usr/local/dc</code>.
+    </li>
+</ol>
+
+<h2>Downloading KallistiOS SVN</h2>
+<ol>
+    <li>
+      Open Cygwin and type in the following:<br><br>
+      <code>
+        cd /usr/local/dc<br>
+        mkdir kos<br>
+        cd kos
+      </code><br><br>
+    </li>
+    <li>
+      Download the latest KallistiOS svn using Cygwin:<br><br>
+    </li>
+    <code>
+      svn co https://cadcdev.svn.sourceforge.net/svnroot/cadcdev/kos<br>
+      svn co https://cadcdev.svn.sourceforge.net/svnroot/cadcdev/kos-ports
+    </code><br><br>
+    <li>
+      Copy over <code>environ.sh.sample</code>:<br><br>
+      <code>
+        cd kos<br>
+        cp doc/environ.sh.sample environ.sh
+      </code><br><br>
+    </li>
+    <li>
+      Open <code>environ.sh</code> in a text editor and set the following variables:<br><br>
+      <code>
+        KOS_BASE: "/usr/local/dc/kos/kos"<br>
+        PATH: "${PATH}:${KOS_CC_BASE}/bin:${DC_ARM_BASE}/bin:${KOS_CC_BASE}/sh-elf/bin"
+      </code><br><br>
+    </li>
+    <li>
+      If you do not need the .svn folders Subversion generated, open Cygwin and type in the following:<br><br>
+      <code>
+        cd /usr/local/dc/kos<br>
+        rm -rf `find . -type d -name .svn`
+      </code><br><br>
+    </li>
+</ol>
+
+<h2>Compiling KallistiOS</h2>
+<ol>
+    <li>
+      Open Cygwin and type the following:<br><br>
+      <code>
+        cd /usr/local/dc/kos/kos<br>
+        source environ.sh<br>
+        make<br>
+        cd ../kos-ports<br>
+        make
+      </code><br><br>
+    </li>
+    <li>
+      If you want the extra kos-ports libraries you can extract <code>kosports-extra.7z</code> (located in the <code>Toolchain</code> folder on this CD), into <code>/usr/local/dc</code>.<br><br>
+	  Note: Do not overwrite any folders, only files (<code>Makefile</code>, <code>environ.sh</code>). The libs are also precompiled.
+    </li>
+</ol>
+
+<h2>Setting up the Environment</h2>
+<ol>
+    <li>
+      This step is optional. It will save you from having to do it manually.<br><br>
+      Open <code>/etc/profile</code> in a text editor (use WordPad as Notepad cannot handle Unix line endings) and add the following to the end of it:<br><br>
+      <code>
+        cd /usr/local/dc/kos/kos<br>
+        source environ.sh
+      </code>
+  </li>
+</ol>
+
+Your Dreamcast environment is now complete.
+
+</body>
+</html>
