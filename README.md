@@ -2,8 +2,8 @@
 Simplified SDL dev for PC Dreamcast
 
 ## Original tutorial & useful links
-https://www.youtube.com/watch?v=1s3CSY67CX4&index=32&list=PLWxwRSOzEfLRgkJAXdS_Nwabwwy1tMNJa
-KallistiOS, the open-source OS for Dreamcast : http://cadcdev.sourceforge.net/softprj/kos/
+https://www.youtube.com/watch?v=1s3CSY67CX4&index=32&list=PLWxwRSOzEfLRgkJAXdS_Nwabwwy1tMNJa<br/>
+KallistiOS, the open-source OS for Dreamcast : http://cadcdev.sourceforge.net/softprj/kos/<br/>
 SDL Wiki : https://wiki.libsdl.org/FrontPage
 
 ## How to deploy to Dreamcast
