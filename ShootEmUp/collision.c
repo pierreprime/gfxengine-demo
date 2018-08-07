@@ -4,6 +4,7 @@
 #include "animatedObject.h"
 #include "../gfxengine_shared/bfg_spriteEngine.h"
 #include "../gfxengine_shared/bfg_sfxEngine.h"
+#include "score.h"
 
 void col_checkCollisionShootAlien(void)
 {
@@ -30,6 +31,7 @@ void col_checkCollisionShootAlien(void)
                             ao_create(ANIMATED_BIG_EXPLOSION, spr_getSpriteX(en_getSprno(ano)), spr_getSpriteY(en_getSprno(ano)));
                             ps_destroy(psno);
                             en_destroy(ano);
+                            score_set(score_get() + 10);
                             playSound(1, 0);
                         }
                         break;

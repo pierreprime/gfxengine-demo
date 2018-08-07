@@ -10,6 +10,7 @@
 #include "collision.h"
 #include "animatedObject.h"
 #include "workflow.h"
+#include "score.h"
 
 int main(int argc, char *argv[])
 {
@@ -92,7 +93,8 @@ int main(int argc, char *argv[])
                 blitImageTra(IMAGE_DECOR, 0, 0);
                 blitImageTra(IMAGE_DECOR, 512, 0);
 
-                we_printString(0, 0, "Hello World !");
+                we_printString(0, 0, "SCORE :");
+                we_printInt(0, 16, score_get());
 
                 spr_updateAllSprites();
                 spr_showAllSprites();

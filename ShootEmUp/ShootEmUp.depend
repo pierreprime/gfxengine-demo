@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1533492430 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
+1533598735 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\main.c
 	<stdio.h>
 	<time.h>
 	"../gfxengine_shared/bfg_gfxEngine.h"
@@ -12,6 +12,7 @@
 	"collision.h"
 	"animatedObject.h"
 	"workflow.h"
+	"score.h"
 
 1394940796 c:\users\prime\documents\devperso\jeu_developpe\sdl2\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -450,13 +451,14 @@
 
 1533491948 c:\users\prime\documents\devperso\jeu_developpe\shootemup\enemy.h
 
-1533492256 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.c
+1533598637 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.c
 	"collision.h"
 	"enemy.h"
 	"playerShoot.h"
 	"animatedObject.h"
 	"../gfxengine_shared/bfg_spriteEngine.h"
 	"../gfxengine_shared/bfg_sfxEngine.h"
+	"score.h"
 
 1533427621 c:\users\prime\documents\devperso\jeu_developpe\shootemup\collision.h
 
@@ -495,4 +497,9 @@
 	"enemyShoot.h"
 
 1533491865 c:\users\prime\documents\devperso\jeu_developpe\shootemup\workflow.h
+
+1533598540 c:\users\prime\documents\devperso\jeu_developpe\shootemup\score.h
+
+1533598486 source:c:\users\prime\documents\devperso\jeu_developpe\shootemup\score.c
+	"score.h"
 

@@ -15,12 +15,14 @@
 					<Add option="-g" />
 					<Add option="-DPC_VERSION" />
 					<Add directory="../SDL2/include" />
+					<Add directory="../SDL2/SDL2_mixer-2.0.0/i686-w64-mingw32/include/SDL2" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../../../../Program Files (x86)/CodeBlocks/MinGW/lib/libmingw32.a" />
 					<Add library="../SDL2/lib/libSDL2main.a" />
 					<Add library="../SDL2/lib/libSDL2.dll.a" />
 					<Add library="../SDL2/lib/libSDL2_image.dll.a" />
+					<Add library="../SDL2/SDL2_mixer-2.0.0/i686-w64-mingw32/lib/libSDL2_mixer.dll.a" />
 					<Add directory="../SDL2/lib" />
 				</Linker>
 			</Target>
@@ -84,6 +86,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="enemy.h" />
+		<Unit filename="enemyShoot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="enemyShoot.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -96,6 +102,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="playerShoot.h" />
+		<Unit filename="workflow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="workflow.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
