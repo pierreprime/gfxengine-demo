@@ -389,3 +389,51 @@
 
 1433421692 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.h
 
+1433522474 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_sfxengine.c
+	<kos.h>
+	<oggvorbis/sndoggvorbis.h>
+	"SDL_mixer.h"
+	<SDL2/SDL.h>
+	<stdio.h>
+	"../gfxengine_shared/bfg_sfxEngine.h"
+
+1432137852 c:\users\prime\documents\devperso\jeu_developpe\sdl2\sdl2_mixer-2.0.0\i686-w64-mingw32\include\sdl2\sdl_mixer.h
+	<SDL2/SDL_stdinc.h>
+	<SDL2/SDL_rwops.h>
+	<SDL2/SDL_audio.h>
+	<SDL2/SDL_endian.h>
+	<SDL2/SDL_version.h>
+	<SDL2/begin_code.h>
+	<SDL2/close_code.h>
+
+1433344038 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_spriteengine.c
+	"../gfxengine_shared/bfg_spriteEngine.h"
+	"../gfxengine_shared/bfg_gfxEngine.h"
+	<png/png.h>
+	<kos.h>
+	<stdlib.h>
+	<stdio.h>
+
+1432127134 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_tilemaps.c
+	"../gfxengine_shared/bfg_gfxEngine.h"
+	"../gfxengine_shared/bfg_tilesmaps.h"
+
+1433421672 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\bfg_writeengine.c
+	<stdio.h>
+	"../gfxengine_shared/bfg_gfxEngine.h"
+
+1030103396 source:c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\simplexml.c
+	<stdlib.h>
+	<string.h>
+	"simplexml.h"
+
+1030103396 c:\users\prime\documents\devperso\jeu_developpe\gfxengine_shared\simplexml.h
+
+1533848473 source:c:\users\prime\documents\devperso\jeu_developpe\platformtutorial\main.c
+	<stdio.h>
+	"../gfxengine_shared/bfg_gfxEngine.h"
+	"../gfxengine_shared/bfg_spriteEngine.h"
+	"myDefines.h"
+
+1533849012 c:\users\prime\documents\devperso\jeu_developpe\platformtutorial\mydefines.h
+
