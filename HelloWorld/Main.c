@@ -1,62 +1,74 @@
 #include <stdio.h>
-#include "headers.h"
+#include <stdlib.h>
 
-
-
-unsigned int tableau[10];
-
-void init_tableau(void){
-    int idx;
-    for(idx=0; idx<10; idx++){
-        tableau[idx] = 0;
-    }
+/**
+* to actually change variable given at call, prefix *
+*/
+void square(int *c){
+    *c = (*c)*(*c);
 }
 
-void affiche_tableau(void){
-    int idx;
-    for(idx=0; idx<10; idx++){
-        printf("\n Tableau[%d] = %d", idx, tableau[idx]);
-    }
+void changeArrValue(char *t)
+{
+    *(t+1) = 10;
 }
 
-unsigned int puissance_carre(unsigned char valeur){
+int main(int argc, char *argv[]){
 
-    return valeur * valeur;
-}
+    int a = 5;
+    char b = 58;
 
-unsigned int puissance(unsigned int valeur, unsigned int puissance){
-    unsigned int resultat, p;
+    // pointer to NULL for the moment
+    int *p_a;
 
-    resultat = 1;
-    printf("\n Start : %d", resultat);
+    // memory allocation. Returns pointer to first memory slot
+    p_a = malloc(sizeof(int) * 1);
 
-    for(p=0; p<puissance; p++){
-        resultat = resultat * valeur;
-        printf("\n Iteration %d --> %d", p, resultat);
-    }
+    // change the value at this memory slot
+    *p_a = 1024;
 
-    return resultat;
-}
+    /**
+    * give MEM ADDRESS with & of var you want to change
+    * No need to prefix if given variable is pointer
+    */
+    square(&a);
 
-int main(void){
+    // arrays are pointers :
+    char arr[10];
+    arr[0] = 5;
+    arr[1] = 3;
 
-    unsigned int carre;
-    unsigned int retour;
-    printf("\n\n");
+    // these lines are equivalents :
+    printf("\n Value of index 0 is %d", arr[0]);
+    printf("\n Value of index 0 is %d", *arr);
+    printf("\n Value of index 1 is %d", arr[1]);
+    printf("\n Value of index 1 is %d", *(arr+1));
 
-    carre = puissance_carre(2);
-    printf("\n Le carre de 2 est %d", carre);
-    printf("\n\n");
-    retour = puissance(3, 4);
-    printf("\n Retour : %d", retour);
+    // manually reserve an array in memory :
+    char *myarr; // no mem slot yet, NULL
+    myarr = malloc(sizeof(char) * 10);
+    myarr[0] = 4;
 
-    POUET
+    printf("\n Value of index 0 myarr is %d", myarr[0]);
 
-    #ifdef DEBUG
-        printf("\nDEBUG");
-    #else
-        printf("\nPas de DEBUG");
-    #endif // DEBUG
+    // directly change index 1 value
+    changeArrValue(myarr);
+
+    printf("\n Value of index 1 is %d", myarr[1]);
+
+
+    printf("\n a is now of value %d", a);
+
+    //p_a = &a;
+
+    // a == 15
+    // p_a == ??
+
+    printf("\n a = %d", a);
+    printf("\n p_a = %d", p_a);
+    printf("\n p_a = %d", *p_a);
+
+    // we see *p_a with * for declaration. Then, simply p_a will show memory adress, and *p_a will show actual pointed value
 
     return 0;
 }
